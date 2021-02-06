@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: home_network
+
+services:
+  web:
+    build: .
+    image: transaction.react:local
+    container_name: transaction-react
+    restart: unless-stopped
+    expose:
+      - 80
