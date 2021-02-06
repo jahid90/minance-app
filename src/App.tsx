@@ -45,7 +45,7 @@ const data = [
 
 function App() {
     return (
-        <div className="app">
+        <div className='app'>
             <Container fluid>
                 <Card.Group>
                     {data.map((item) => (
