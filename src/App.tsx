@@ -36,7 +36,7 @@ const data = [
     },
     {
         id: 4,
-        title: 'Fixed Deposit #2',
+        title: 'Fixed Deposit #4',
         date: new Date(2024, 5, 15),
         amount: {
             rupee: 100000,

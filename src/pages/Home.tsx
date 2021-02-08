@@ -11,19 +11,21 @@ interface Props {
 function Home({ data }: Props) {
     return (
         <Card.Group>
-            {data.map((item) => (
-                <TransactionCard
-                    key={item.id}
-                    item={item}
-                    type={
-                        item.id === 1
-                            ? 'Expiring'
-                            : item.id === 2
-                            ? 'Vesting'
-                            : 'Renewal'
-                    }
-                />
-            ))}
+            {data
+                .sort((a, b) => a.date.getTime() - b.date.getTime())
+                .map((item) => (
+                    <TransactionCard
+                        key={item.id}
+                        item={item}
+                        type={
+                            item.id === 1
+                                ? 'Expiring'
+                                : item.id === 2
+                                ? 'Vesting'
+                                : 'Renewal'
+                        }
+                    />
+                ))}
         </Card.Group>
     );
 }
