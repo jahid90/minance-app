@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
 
-import { ITransaction } from '../components/Transaction';
+import { ITransaction } from '../models/Transaction';
 import TransactionCard from '../components/TransactionCard';
 
 interface Props {
     data: Array<ITransaction>;
 }
 
-function Home({ data }: Props) {
+const Home = ({ data }: Props) => {
     return (
         <Card.Group>
             {data
@@ -28,6 +28,6 @@ function Home({ data }: Props) {
                 ))}
         </Card.Group>
     );
-}
+};
 
 export default Home;

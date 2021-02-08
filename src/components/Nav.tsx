@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu } from 'semantic-ui-react';
 
-function Nav() {
+const Nav = () => {
     const [activeItem, setActiveItem] = useState('home');
 
     return (
@@ -37,6 +37,6 @@ function Nav() {
             </Menu.Menu>
         </Menu>
     );
-}
+};
 
 export default Nav;

@@ -1,16 +1,19 @@
 import React from 'react';
-import { Button, Card, Image } from 'semantic-ui-react';
 import moment from 'moment';
+import { useHistory } from 'react-router-dom';
+import { Button, Card, Image } from 'semantic-ui-react';
 
 import Money from './Money';
-import { ITransaction } from './Transaction';
+import { ITransaction } from '../models/Transaction';
 
 interface Props {
     item: ITransaction;
     type: string;
 }
 
-function TransactionCard({ item, type }: Props) {
+const TransactionCard = ({ item, type }: Props) => {
+    const history = useHistory();
+
     return (
         <Card>
             <Card.Content>
@@ -31,16 +34,24 @@ function TransactionCard({ item, type }: Props) {
             </Card.Content>
             <Card.Content extra>
                 <div className='ui two buttons'>
-                    <Button basic color='green'>
+                    <Button
+                        basic
+                        color='green'
+                        onClick={() => history.push(`/transaction/${item.id}`)}
+                    >
                         Details
                     </Button>
-                    <Button basic color='blue'>
+                    <Button
+                        basic
+                        color='blue'
+                        onClick={() => history.push(`/investment/${item.id}`)}
+                    >
                         Investment
                     </Button>
                 </div>
             </Card.Content>
         </Card>
     );
-}
+};
 
 export default TransactionCard;

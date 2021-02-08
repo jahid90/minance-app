@@ -4,7 +4,9 @@ import { Container } from 'semantic-ui-react';
 import './App.css';
 import Nav from './components/Nav';
 import Home from './pages/Home';
+import InvestmentDetail from './pages/InvestmentDetail';
 import PageNotFound from './pages/PageNotFound';
+import TransactionDetail from './pages/TransactionDetail';
 
 const data = [
     {
@@ -45,7 +47,7 @@ const data = [
     },
 ];
 
-function App() {
+const App = () => {
     return (
         <>
             <Nav />
@@ -58,6 +60,16 @@ function App() {
                                 path='/'
                                 component={() => <Home data={data} />}
                             />
+                            <Route
+                                exact
+                                path='/transaction/:id'
+                                component={TransactionDetail}
+                            />
+                            <Route
+                                exact
+                                path='/investment/:id'
+                                component={InvestmentDetail}
+                            />
                             <Route component={PageNotFound} />
                         </Switch>
                     </Router>
@@ -65,6 +77,6 @@ function App() {
             </div>
         </>
     );
-}
+};
 
 export default App;
