@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 
 import './App.css';
+import Nav from './components/Nav';
 import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 
@@ -46,20 +47,23 @@ const data = [
 
 function App() {
     return (
-        <div className='app'>
-            <Container fluid>
-                <Router>
-                    <Switch>
-                        <Route
-                            exact
-                            path='/'
-                            component={() => <Home data={data} />}
-                        />
-                        <Route component={PageNotFound} />
-                    </Switch>
-                </Router>
-            </Container>
-        </div>
+        <>
+            <Nav />
+            <div className='app'>
+                <Container fluid>
+                    <Router>
+                        <Switch>
+                            <Route
+                                exact
+                                path='/'
+                                component={() => <Home data={data} />}
+                            />
+                            <Route component={PageNotFound} />
+                        </Switch>
+                    </Router>
+                </Container>
+            </div>
+        </>
     );
 }
 
