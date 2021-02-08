@@ -1,8 +1,9 @@
-import { Card, Container } from 'semantic-ui-react';
-
-import TransactionCard from './components/TransactionCard';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
 
 import './App.css';
+import Home from './pages/Home';
+import PageNotFound from './pages/PageNotFound';
 
 const data = [
     {
@@ -47,21 +48,16 @@ function App() {
     return (
         <div className='app'>
             <Container fluid>
-                <Card.Group>
-                    {data.map((item) => (
-                        <TransactionCard
-                            key={item.id}
-                            item={item}
-                            type={
-                                item.id === 1
-                                    ? 'Expiring'
-                                    : item.id === 2
-                                    ? 'Vesting'
-                                    : 'Renewal'
-                            }
+                <Router>
+                    <Switch>
+                        <Route
+                            exact
+                            path='/'
+                            component={() => <Home data={data} />}
                         />
-                    ))}
-                </Card.Group>
+                        <Route component={PageNotFound} />
+                    </Switch>
+                </Router>
             </Container>
         </div>
     );
