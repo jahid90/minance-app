@@ -1,5 +1,22 @@
 .app {
     max-width: 1024px;
     margin: 20px auto;
-    text-align: center;
+}
+
+.app .form {
+    margin: 0px auto;
+    width: 600px;
+    line-height: 30px;
+}
+
+.app .form label,
+.app .form input,
+.app .form button {
+    font-size: 18px !important;
+}
+
+.app .form .errors {
+    width: 600px;
+    margin-top: 75px;
+    font-size: 16px;
 }
