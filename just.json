@@ -1,0 +1,12 @@
+{
+    "version": "4",
+    "commands": {
+        "build": "pnpm build",
+        "lint": "pnpm lint",
+        "test": "pnpm test",
+        "start": "pnpm start",
+        "docker:build": "docker build -t transaction.react:local .",
+        "docker:start": "docker-compose up -d",
+        "docker:stop": "docker-compose down"
+    }
+}
