@@ -16,6 +16,16 @@ html, body {
     justify-content: center;
 }
 
+.app .home-content {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
 .app .transaction-cards {
     justify-content: space-around;
 }

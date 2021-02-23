@@ -1,61 +1,25 @@
-import { Card } from 'semantic-ui-react';
+import { lazy } from 'react';
+import { Link } from 'react-router-dom';
+import { Segment } from 'semantic-ui-react';
+import { useAppContext } from '../context/AppContextProvider';
 
-import TransactionCard from '../components/TransactionCard';
-
-const data = [
-    {
-        id: 1,
-        title: 'Fixed Deposit #1',
-        date: new Date(2021, 3, 6),
-        amount: {
-            rupee: 98765432,
-            paise: 10,
-        },
-    },
-    {
-        id: 2,
-        title: 'Fixed Deposit #2',
-        date: new Date(2022, 3, 8),
-        amount: {
-            rupee: 7638,
-            paise: 50,
-        },
-    },
-    {
-        id: 3,
-        title: 'Fixed Deposit #3',
-        date: new Date(2021, 6, 21),
-        amount: {
-            rupee: 500000,
-            paise: 0,
-        },
-    },
-    {
-        id: 4,
-        title: 'Fixed Deposit #4',
-        date: new Date(2024, 5, 15),
-        amount: {
-            rupee: 100000,
-            paise: 0,
-        },
-    },
-];
+const Transactions = lazy(() => import('../components/Transactions'));
 
 const Home = () => {
+    const { token } = useAppContext();
+
     return (
-        <Card.Group className='transaction-cards'>
-            {data
-                .sort((a, b) => a.date.getTime() - b.date.getTime())
-                .map((item) => (
-                    <TransactionCard
-                        key={item.id}
-                        item={item}
-                        type={item.id === 1 ? 'Expiring' : item.id === 2 ? 'Vesting' : 'Renewal'}
-                    />
-                ))}
-            <Card className='transaction-card dummy' />
-            <Card className='transaction-card dummy' />
-        </Card.Group>
+        <>
+            {token && <Transactions />}
+            {!token && (
+                <Segment secondary className='home-content'>
+                    <p>You need to be logged in to view this content.</p>
+                    <p>
+                        <Link to='/login'>Login</Link> or <Link to='/register'>Register</Link>
+                    </p>
+                </Segment>
+            )}
+        </>
     );
 };
 

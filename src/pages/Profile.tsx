@@ -24,7 +24,7 @@ const Profile = () => {
     const handleClick = async () => {
         await dispatch({ type: Action.LOG_USER_OUT, data: { token } });
 
-        history.push('/login');
+        history.push('/');
     };
 
     return (

@@ -20,7 +20,7 @@ const Routes = () => {
             <div className='app-content'>
                 <Suspense fallback='Loading...'>
                     <Switch>
-                        <AuthenticatedRoute exact path='/' component={Home} />
+                        <Route exact path='/' component={Home} />
                         <AuthenticatedRoute exact path='/transaction/:id' component={TransactionDetail} />
                         <AuthenticatedRoute exact path='/investment/:id' component={InvestmentDetail} />
                         <UnauthenticatedRoute exact path='/login' component={Login} />
