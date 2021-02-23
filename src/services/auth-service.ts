@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useAppContext } from '../context/AppContextProvider';
 
 const auth = axios.create({
     baseURL: 'http://auth.jahiduls.local',
@@ -35,4 +36,12 @@ export const refresh = async (): Promise<string | ErrorResponse> => {
     }: ILoginResponse = await auth.post('/renew');
 
     return accessToken;
+};
+
+export const logout = async (token: string): Promise<void> => {
+    await auth.delete('/logout', {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
 };

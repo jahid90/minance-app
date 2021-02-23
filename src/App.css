@@ -3,15 +3,43 @@
     margin: 20px auto;
 }
 
+.app .transaction-cards {
+    justify-content: space-around;
+}
+
+.app .transaction-cards .transaction-card {
+    width: 30% !important;
+}
+
+.app .transaction-cards .dummy {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+}
+
+.app .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 20px 0;
+}
+
 .app .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0px auto;
     width: 600px;
     line-height: 30px;
 }
 
-.app .form label,
-.app .form input,
-.app .form button {
+.app .form .field {
+    width: 100%;
+}
+
+.app .form .field,
+.app .form .button {
     font-size: 18px !important;
 }
 

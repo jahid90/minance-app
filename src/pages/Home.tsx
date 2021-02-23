@@ -43,7 +43,7 @@ const data = [
 
 const Home = () => {
     return (
-        <Card.Group>
+        <Card.Group className='transaction-cards'>
             {data
                 .sort((a, b) => a.date.getTime() - b.date.getTime())
                 .map((item) => (
@@ -53,6 +53,8 @@ const Home = () => {
                         type={item.id === 1 ? 'Expiring' : item.id === 2 ? 'Vesting' : 'Renewal'}
                     />
                 ))}
+            <Card className='transaction-card dummy' />
+            <Card className='transaction-card dummy' />
         </Card.Group>
     );
 };
