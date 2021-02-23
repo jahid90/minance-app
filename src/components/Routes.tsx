@@ -12,14 +12,16 @@ const Routes = () => {
     return (
         <Router>
             <Nav />
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/transaction/:id' component={TransactionDetail} />
-                <Route exact path='/investment/:id' component={InvestmentDetail} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/profile' component={Profile} />
-                <Route component={PageNotFound} />
-            </Switch>
+            <div className='app-content'>
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/transaction/:id' component={TransactionDetail} />
+                    <Route exact path='/investment/:id' component={InvestmentDetail} />
+                    <Route exact path='/login' component={Login} />
+                    <Route exact path='/profile' component={Profile} />
+                    <Route component={PageNotFound} />
+                </Switch>
+            </div>
         </Router>
     );
 };

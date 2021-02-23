@@ -1,6 +1,16 @@
+* {
+    font-size: 18px;
+}
+
 .app {
     max-width: 1024px;
     margin: 20px auto;
+}
+
+.app .app-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .app .transaction-cards {
@@ -25,20 +35,26 @@
     margin: 20px 0;
 }
 
+.app .form-container {
+    width: 600px;
+    padding: 30px !important;
+}
+
 .app .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0px auto;
-    width: 600px;
+    width: 100%;
     line-height: 30px;
 }
 
-.app .form .field {
-    width: 100%;
+.app .form .form-field-container, .app .form .form-field-container .form-field {
+    max-width: 80% !important;
+    width: 80%;
 }
 
-.app .form .field,
+.app .form .field .input,
 .app .form .button {
     font-size: 18px !important;
 }
@@ -47,4 +63,9 @@
     width: 600px;
     margin-top: 75px;
     font-size: 16px;
+}
+
+.app .profile-content {
+    width: 100%;
+    padding: 20px;
 }

@@ -1,6 +1,6 @@
 import decode from 'jwt-decode';
 import { useHistory } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
+import { Button, Segment } from 'semantic-ui-react';
 
 import { useAppContext } from '../context/AppContextProvider';
 import { logout } from '../services/auth-service';
@@ -26,13 +26,15 @@ const Profile = () => {
     };
 
     return (
-        <>
+        <Segment className='profile-content'>
             <p>Hi {decoded.username || 'stranger'}! This is the profile page.</p>
 
-            <Button basic color='red' onClick={handleClick}>
-                Logout
-            </Button>
-        </>
+            <div>
+                <Button basic color='red' onClick={handleClick}>
+                    Logout
+                </Button>
+            </div>
+        </Segment>
     );
 };
 
