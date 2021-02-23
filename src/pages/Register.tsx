@@ -74,7 +74,7 @@ const Register = () => {
                         className='form-field'
                     />
                 </Form.Field>
-                <Button type='submit' floated='right' className='form-field'>
+                <Button type='submit' floated='right' className='form-field' color='blue' >
                     Submit
                 </Button>
                 <Message>
