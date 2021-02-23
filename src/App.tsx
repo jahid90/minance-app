@@ -1,16 +1,13 @@
-import { Container } from 'semantic-ui-react';
+import AppContainer from './components/AppContainer';
+import AppContextProvider from './context/AppContextProvider';
 
 import './App.css';
-import Routes from './components/Routes';
-import AppContextProvider from './context/AppContextProvider';
 
 const App = () => {
     return (
         <AppContextProvider>
             <div className='app'>
-                <Container fluid>
-                    <Routes />
-                </Container>
+                <AppContainer />
             </div>
         </AppContextProvider>
     );

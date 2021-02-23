@@ -1,25 +1,15 @@
-import decode from 'jwt-decode';
 import { useHistory } from 'react-router-dom';
 import { Button, Segment } from 'semantic-ui-react';
 
 import { Action } from '../context/app-reducer';
 import { useAppContext, useDispatchContext } from '../context/AppContextProvider';
-
-interface IToken {
-    username?: string;
-    email?: string;
-    roles?: Array<string>;
-}
+import { decode } from '../services/token';
 
 const Profile = () => {
     const { token } = useAppContext();
+    const decoded = decode(token);
     const dispatch = useDispatchContext();
     const history = useHistory();
-
-    let decoded: IToken = {};
-    if (token) {
-        decoded = decode(token);
-    }
 
     const handleClick = async () => {
         await dispatch({ type: Action.LOG_USER_OUT, data: { token } });

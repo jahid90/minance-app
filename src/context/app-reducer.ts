@@ -1,7 +1,11 @@
 import { Dispatch } from 'react';
+
 import { login, logout, register } from '../services/auth-service';
+import { hasExpired } from '../services/token';
 
 export const Action = {
+    APP_LOADED: 'app-loaded',
+    LOAD_APP: 'load-app',
     LOG_USER_IN: 'log-user-in',
     LOG_USER_OUT: 'log-user-out',
     REGISTER_USER: 'register-user',
@@ -11,16 +15,22 @@ export const Action = {
 };
 
 export interface IState {
-    token?: string;
+    token: string;
 }
 
 export interface IAction {
     type: string;
-    data?: Record<string, unknown>;
+    data?: Record<string, string>;
 }
 
 export const reducer = (state: IState, action: IAction): IState => {
     switch (action.type) {
+        case Action.APP_LOADED:
+            return {
+                ...state,
+                token: action.data?.token as string,
+            };
+
         case Action.USER_LOGGED_IN:
             return {
                 ...state,
@@ -47,38 +57,55 @@ export const reducer = (state: IState, action: IAction): IState => {
 
 export const wrapDispatch = (dispatch: Dispatch<IAction>) => {
     return async (action: IAction) => {
-        try {
-            console.info(`received: ${action.type}`);
+        console.info(`received: ${action.type}`);
 
-            switch (action.type) {
-                case Action.LOG_USER_IN:
-                    const l_username = action.data?.username as string;
-                    const l_password = action.data?.password as string;
-                    const l_accessToken = await login(l_username, l_password);
-                    dispatch({ type: Action.USER_LOGGED_IN, data: { token: l_accessToken } });
-                    break;
+        // TODO - consider removing all locals to not need the curly braces hack; just use well-named functions?
+        switch (action.type) {
+            case Action.LOAD_APP: {
+                const token = (await localStorage.getItem('token'));
 
-                case Action.LOG_USER_OUT:
-                    const l_token = action.data?.token as string;
-                    await logout(l_token);
-                    dispatch({ type: Action.USER_LOGGED_OUT });
-                    break;
-
-                case Action.REGISTER_USER:
-                    const r_username = action.data?.username as string;
-                    const r_email = action.data?.email as string;
-                    const r_password = action.data?.password as string;
-                    const r_confirmPassword = action.data?.password as string;
-                    await register(r_username, r_email, r_password, r_confirmPassword);
-                    dispatch({ type: Action.USER_REGISTERED });
-                    break;
-
-                default:
-                    dispatch(action);
-                    break;
+                if (!token) {
+                    console.log('no saved session was found')
+                } else if (!hasExpired(token)) {
+                    dispatch({ type: Action.APP_LOADED, data: { token } });
+                } else {
+                    await localStorage.removeItem('token');
+                    console.info('token has expired');
+                }
+                break;
             }
-        } catch (err) {
-            throw err;
+
+            case Action.LOG_USER_IN: {
+                if (action.data) {
+                    const { username, password } = action.data;
+                    const token = (await login(username, password)) as string;
+                    await localStorage.setItem('token', token);
+                    dispatch({ type: Action.USER_LOGGED_IN, data: { token } });
+                }
+                break;
+            }
+
+            case Action.LOG_USER_OUT: {
+                const token = action.data?.token as string;
+                await logout(token);
+                await localStorage.removeItem('token');
+                dispatch({ type: Action.USER_LOGGED_OUT });
+                break;
+            }
+
+            case Action.REGISTER_USER: {
+                if (action.data) {
+                    const { username, email, password, confirmPassword } = action.data;
+                    await register(username, email, password, confirmPassword);
+                    dispatch({ type: Action.USER_REGISTERED });
+                }
+                break;
+            }
+
+            default: {
+                dispatch(action);
+                break;
+            }
         }
     };
 };
