@@ -20,7 +20,6 @@ const Login = (props: ILoginProps) => {
     const [password, setPassword] = useState('');
     const dispatch = useDispatchContext();
     const history = useHistory();
-    console.log(history);
 
     const handleSubmit = async (e: FormEvent<HTMLElement>) => {
         try {
@@ -40,7 +39,7 @@ const Login = (props: ILoginProps) => {
     };
 
     return (
-        <Segment placeholder className='form-container'>
+        <Segment secondary className='form-container'>
             <Form className='login-form form' onSubmit={handleSubmit}>
                 <h1>Login</h1>
                 <Icon name='user' className='profile-image' size='massive'/>
@@ -62,7 +61,7 @@ const Login = (props: ILoginProps) => {
                         className='form-field'
                     />
                 </Form.Field>
-                <Button type='submit' floated='right' className='form-field' color='blue'>
+                <Button type='submit' className='form-field' color='blue'>
                     Submit
                 </Button>
                 <Message>

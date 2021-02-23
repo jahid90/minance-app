@@ -28,10 +28,10 @@ const Profile = () => {
     };
 
     return (
-        <Segment className='profile-content'>
+        <Segment secondary className='profile-content'>
             <p>Hi {decoded.username || 'stranger'}! This is the profile page.</p>
 
-            <Segment secondary>
+            <Segment tertiary>
                 <p>Here's your account details</p>
                 <p>Username: {decoded.username || '<missing>'}</p>
                 <p>Email: {decoded.email || '<missing>'}</p>

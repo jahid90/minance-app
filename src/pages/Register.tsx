@@ -35,7 +35,7 @@ const Register = () => {
     };
 
     return (
-        <Segment placeholder className='form-container'>
+        <Segment secondary className='form-container'>
             <Form className='login-form form' onSubmit={handleSubmit}>
                 <h1>Register</h1>
                 <Icon name='user' className='profile-image' size='massive'/>
@@ -74,7 +74,7 @@ const Register = () => {
                         className='form-field'
                     />
                 </Form.Field>
-                <Button type='submit' floated='right' className='form-field' color='blue' >
+                <Button type='submit' className='form-field' color='blue' >
                     Submit
                 </Button>
                 <Message>

@@ -50,13 +50,17 @@ html, body {
 }
 
 .app .form .form-field-container, .app .form .form-field-container .form-field {
-    max-width: 80% !important;
-    width: 80%;
+    max-width: 100% !important;
+    width: 100%;
 }
 
 .app .form .field .input,
 .app .form .button {
     font-size: 18px !important;
+}
+
+.app .form button.form-field {
+    margin: 20px 0 !important;
 }
 
 .app .form .errors {
