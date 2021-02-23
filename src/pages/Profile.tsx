@@ -2,8 +2,8 @@ import decode from 'jwt-decode';
 import { useHistory } from 'react-router-dom';
 import { Button, Segment } from 'semantic-ui-react';
 
-import { useAppContext } from '../context/AppContextProvider';
-import { logout } from '../services/auth-service';
+import { Action } from '../context/app-reducer';
+import { useAppContext, useDispatchContext } from '../context/AppContextProvider';
 
 interface IToken {
     username?: string;
@@ -13,6 +13,7 @@ interface IToken {
 
 const Profile = () => {
     const { token } = useAppContext();
+    const dispatch = useDispatchContext();
     const history = useHistory();
 
     let decoded: IToken = {};
@@ -21,7 +22,8 @@ const Profile = () => {
     }
 
     const handleClick = async () => {
-        await logout(token as string);
+        await dispatch({ type: Action.LOG_USER_OUT, data: { token } });
+
         history.push('/login');
     };
 

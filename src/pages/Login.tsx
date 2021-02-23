@@ -2,8 +2,9 @@ import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Form, Image, Message, Segment } from 'semantic-ui-react';
 
-import { Action, useDispatchContext } from '../context/AppContextProvider';
-import { ErrorResponse, login } from '../services/auth-service';
+import { useDispatchContext } from '../context/AppContextProvider';
+import { Action } from '../context/app-reducer';
+import { ErrorResponse } from '../services/auth-service';
 
 import profileImage from '../assets/profile.png';
 
@@ -19,8 +20,7 @@ const Login = () => {
             e.preventDefault();
             setError({} as ErrorResponse);
 
-            const accessToken = await login(username, password);
-            dispatch({ type: Action.USER_LOGGED_IN, data: { accessToken } });
+            await dispatch({ type: Action.LOG_USER_IN, data: { username, password } });
 
             setUsername('');
             setPassword('');
