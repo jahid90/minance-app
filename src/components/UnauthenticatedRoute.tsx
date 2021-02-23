@@ -5,7 +5,7 @@ const UnauthenticatedRoute = (props: RouteProps) => {
     const { token } = useAppContext();
 
     if (token) {
-        return <Redirect to={{ pathname: '/profile', state: props.location }} />;
+        return <Redirect to={{ pathname: '/profile', state: { from: props.location } }} />;
     }
 
     return <Route {...props} />;

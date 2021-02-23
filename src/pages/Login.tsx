@@ -8,12 +8,21 @@ import { ErrorResponse } from '../services/auth-service';
 
 import profileImage from '../assets/profile.png';
 
-const Login = () => {
+interface ILoginProps {
+    location?: {
+        state?: {
+            from?: string;
+        }
+    }
+}
+
+const Login = (props: ILoginProps) => {
     const [error, setError] = useState({} as ErrorResponse);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatchContext();
     const history = useHistory();
+    console.log(history);
 
     const handleSubmit = async (e: FormEvent<HTMLElement>) => {
         try {
@@ -25,7 +34,7 @@ const Login = () => {
             setUsername('');
             setPassword('');
 
-            history.push('/');
+            history.push(props?.location?.state?.from || '/');
         } catch (e) {
             console.error(e);
             setError(e.response?.data?.error);

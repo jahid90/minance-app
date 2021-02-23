@@ -5,7 +5,7 @@ const AuthenticatedRoute = (props: RouteProps) => {
     const { token } = useAppContext();
 
     if (!token) {
-        return <Redirect to={{ pathname: '/login', state: props.location }} />;
+        return <Redirect to={{ pathname: '/login', state: { from: props.location } }} />;
     }
 
     return <Route {...props} />;
