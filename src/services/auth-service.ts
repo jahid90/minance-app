@@ -19,6 +19,20 @@ export interface ErrorResponse {
     data: Record<string, Array<string>>;
 }
 
+export const register = async (
+    username: string,
+    email: string,
+    password: string,
+    confirmPassword: string
+): Promise<void> => {
+    await auth.post('/register', {
+        username,
+        email,
+        password,
+        confirmPassword,
+    });
+};
+
 export const login = async (username: string, password: string): Promise<string | ErrorResponse> => {
     const {
         data: { accessToken },
@@ -30,18 +44,18 @@ export const login = async (username: string, password: string): Promise<string 
     return accessToken;
 };
 
-export const refresh = async (): Promise<string | ErrorResponse> => {
-    const {
-        data: { accessToken },
-    }: ILoginResponse = await auth.post('/renew');
-
-    return accessToken;
-};
-
 export const logout = async (token: string): Promise<void> => {
     await auth.delete('/logout', {
         headers: {
             Authorization: `Bearer ${token}`,
         },
     });
+};
+
+export const refresh = async (): Promise<string | ErrorResponse> => {
+    const {
+        data: { accessToken },
+    }: ILoginResponse = await auth.post('/renew');
+
+    return accessToken;
 };

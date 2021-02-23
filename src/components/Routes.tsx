@@ -7,6 +7,7 @@ import Profile from '../pages/Profile';
 import PageNotFound from '../pages/PageNotFound';
 import TransactionDetail from '../pages/TransactionDetail';
 import Nav from './Nav';
+import Register from '../pages/Register';
 
 const Routes = () => {
     return (
@@ -18,6 +19,7 @@ const Routes = () => {
                     <Route exact path='/transaction/:id' component={TransactionDetail} />
                     <Route exact path='/investment/:id' component={InvestmentDetail} />
                     <Route exact path='/login' component={Login} />
+                    <Route exact path='/register' component={Register} />
                     <Route exact path='/profile' component={Profile} />
                     <Route component={PageNotFound} />
                 </Switch>

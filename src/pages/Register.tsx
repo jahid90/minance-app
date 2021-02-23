@@ -8,10 +8,12 @@ import { ErrorResponse } from '../services/auth-service';
 
 import profileImage from '../assets/profile.png';
 
-const Login = () => {
+const Register = () => {
     const [error, setError] = useState({} as ErrorResponse);
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const dispatch = useDispatchContext();
     const history = useHistory();
 
@@ -20,12 +22,14 @@ const Login = () => {
             e.preventDefault();
             setError({} as ErrorResponse);
 
-            await dispatch({ type: Action.LOG_USER_IN, data: { username, password } });
+            await dispatch({ type: Action.REGISTER_USER, data: { username, email, password, confirmPassword } });
 
             setUsername('');
+            setEmail('');
             setPassword('');
+            setConfirmPassword('');
 
-            history.push('/');
+            history.push('/login');
         } catch (e) {
             console.error(e);
             setError(e.response?.data?.error);
@@ -35,7 +39,7 @@ const Login = () => {
     return (
         <Segment placeholder className='form-container'>
             <Form className='login-form form' onSubmit={handleSubmit}>
-                <h1>Login</h1>
+                <h1>Register</h1>
                 <Image src={profileImage} className='profile-image' />
                 <Form.Field className='form-field-container'>
                     <Form.Input
@@ -48,6 +52,14 @@ const Login = () => {
                 </Form.Field>
                 <Form.Field className='form-field-container'>
                     <Form.Input
+                        placeholder='Email'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className='form-field'
+                    />
+                </Form.Field>
+                <Form.Field className='form-field-container'>
+                    <Form.Input
                         placeholder='Password'
                         value={password}
                         type='password'
@@ -55,14 +67,23 @@ const Login = () => {
                         className='form-field'
                     />
                 </Form.Field>
-                <Button type='submit' floated='right' className='form-field' color='blue'>
+                <Form.Field className='form-field-container'>
+                    <Form.Input
+                        placeholder='Confirm Password'
+                        value={confirmPassword}
+                        type='password'
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        className='form-field'
+                    />
+                </Form.Field>
+                <Button type='submit' floated='right' className='form-field'>
                     Submit
                 </Button>
                 <Message>
                     <div>
-                        Not registered?{' '}
-                        <Label basic color='blue' as='a' onClick={() => history.push('/register')}>
-                            Register
+                        Already registered?{' '}
+                        <Label basic color='blue' as='a' onClick={() => history.push('/login')}>
+                            Login
                         </Label>
                     </div>
                 </Message>
@@ -71,7 +92,9 @@ const Login = () => {
                         <Message.Header>{error.message}</Message.Header>
                         <Message.List>
                             {error.data?.username && <Message.Item>{error.data.username}</Message.Item>}
+                            {error.data?.email && <Message.Item>{error.data.email}</Message.Item>}
                             {error.data?.password && <Message.Item>{error.data.password}</Message.Item>}
+                            {error.data?.confirmPassword && <Message.Item>{error.data.confirmPassword}</Message.Item>}
                         </Message.List>
                     </Message>
                 )}
@@ -80,4 +103,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
