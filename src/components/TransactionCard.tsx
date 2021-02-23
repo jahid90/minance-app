@@ -1,12 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 import { useHistory } from 'react-router-dom';
-import { Button, Card, Image } from 'semantic-ui-react';
+import { Button, Card, Icon } from 'semantic-ui-react';
 
 import Money from './Money';
 import { ITransaction } from '../models/Transaction';
-
-import profileImage from '../assets/profile.png';
 
 interface Props {
     item: ITransaction;
@@ -19,9 +17,7 @@ const TransactionCard = ({ item, type }: Props) => {
     return (
         <Card className='transaction-card'>
             <Card.Content>
-                <>
-                    <Image floated='right' size='tiny' src={profileImage} className='profile-image' />
-                </>
+                <Icon name='file alternate' className='profile-image floated-right' size='big' />
                 <Card.Header>{item.title}</Card.Header>
                 <Card.Meta>
                     {type} {moment(item.date).fromNow()}

@@ -1,12 +1,10 @@
 import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Button, Form, Image, Label, Message, Segment } from 'semantic-ui-react';
+import { Button, Form, Icon, Label, Message, Segment } from 'semantic-ui-react';
 
 import { useDispatchContext } from '../context/AppContextProvider';
 import { Action } from '../context/app-reducer';
 import { ErrorResponse } from '../services/auth-service';
-
-import profileImage from '../assets/profile.png';
 
 const Register = () => {
     const [error, setError] = useState({} as ErrorResponse);
@@ -40,7 +38,7 @@ const Register = () => {
         <Segment placeholder className='form-container'>
             <Form className='login-form form' onSubmit={handleSubmit}>
                 <h1>Register</h1>
-                <Image src={profileImage} className='profile-image' />
+                <Icon name='user' className='profile-image' size='massive'/>
                 <Form.Field className='form-field-container'>
                     <Form.Input
                         placeholder='Username'

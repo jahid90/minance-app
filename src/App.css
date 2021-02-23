@@ -29,10 +29,7 @@
 }
 
 .app .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    margin: 20px 0;
+    margin: 20px 0px 40px 0px;
 }
 
 .app .form-container {
@@ -68,4 +65,8 @@
 .app .profile-content {
     width: 100%;
     padding: 20px;
+}
+
+.app .floated-right {
+    float: right;
 }

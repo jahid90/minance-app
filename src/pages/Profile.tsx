@@ -31,6 +31,12 @@ const Profile = () => {
         <Segment className='profile-content'>
             <p>Hi {decoded.username || 'stranger'}! This is the profile page.</p>
 
+            <Segment secondary>
+                <p>Here's your account details</p>
+                <p>Username: {decoded.username || '<missing>'}</p>
+                <p>Email: {decoded.email || '<missing>'}</p>
+            </Segment>
+
             <div>
                 <Button basic color='red' onClick={handleClick}>
                     Logout
