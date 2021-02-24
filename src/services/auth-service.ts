@@ -1,8 +1,7 @@
 import axios from 'axios';
-import { useAppContext } from '../context/AppContextProvider';
 
 const auth = axios.create({
-    baseURL: 'http://auth.jahiduls.local',
+    baseURL: '/api/auth',
     withCredentials: true,
 });
 
