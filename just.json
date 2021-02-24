@@ -1,0 +1,10 @@
+{
+    "version": "4",
+    "commands": {
+        "clean": "rm -rf build",
+        "build": "./gradlew bootJar",
+        "docker:build": "docker build -t minance.service:local .",
+        "docker:start": "docker-compose up -d",
+        "docker:stop": "docker-compose down"
+    }
+}
