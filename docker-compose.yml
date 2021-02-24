@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: home_network
+
+services:
+  minance-service:
+    build: .
+    image: minance.service:local
+    container_name: minance-service
+    restart: unless-stopped
+    expose:
+      - 8080
