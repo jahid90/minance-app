@@ -1,6 +1,6 @@
 package io.jahiduls.minance.commands;
 
-import io.jahiduls.minance.model.MaturityInstruction;
+import io.jahiduls.minance.models.MaturityInstruction;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

@@ -1,7 +1,7 @@
 package io.jahiduls.minance.events;
 
-import io.jahiduls.minance.model.Date;
-import io.jahiduls.minance.model.User;
+import io.jahiduls.minance.models.Date;
+import io.jahiduls.minance.models.User;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

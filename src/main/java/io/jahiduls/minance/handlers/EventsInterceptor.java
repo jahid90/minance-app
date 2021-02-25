@@ -1,4 +1,4 @@
-package io.jahiduls.minance.projectors;
+package io.jahiduls.minance.handlers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.ReplayStatus;

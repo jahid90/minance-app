@@ -1,21 +1,25 @@
-package io.jahiduls.minance.model;
+package io.jahiduls.minance.models;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Builder
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class InvestmentPeriod {
 
     private static final int MULTIPLIER = 100;
 
-    public final int years;
-    public final int months;
-    public final int days;
+    public int years;
+    public int months;
+    public int days;
 
     public static InvestmentPeriod fromInt(int period) {
         return InvestmentPeriod.builder()

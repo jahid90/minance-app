@@ -1,22 +1,22 @@
-package io.jahiduls.minance.model;
+package io.jahiduls.minance.views;
 
+import io.jahiduls.minance.models.User;
 import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Getter
 @Builder
 @ToString
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class TermDepositIdsView {
-    @Id private UUID id;
+    @Id public UUID id;
+    public User user;
 }

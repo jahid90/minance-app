@@ -1,4 +1,4 @@
-package io.jahiduls.minance.projectors;
+package io.jahiduls.minance.handlers;
 
 import com.google.common.cache.CacheStats;
 import io.jahiduls.minance.helpers.TermDepositCache;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CacheProjector {
+public class CacheQueriesHandler {
 
     @QueryHandler
     private CacheStats on(GetCacheStatsQuery query, @Autowired TermDepositCache cache) {

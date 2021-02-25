@@ -1,21 +1,25 @@
-package io.jahiduls.minance.model;
+package io.jahiduls.minance.models;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Builder
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class Date {
 
     private static final int MULTIPLIER = 100;
 
-    public final int year;
-    public final int month;
-    public final int day;
+    public int year;
+    public int month;
+    public int day;
 
     public static Date fromInt(int date) {
         return Date.builder()

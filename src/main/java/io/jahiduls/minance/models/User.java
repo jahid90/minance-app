@@ -1,17 +1,21 @@
-package io.jahiduls.minance.model;
+package io.jahiduls.minance.models;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Builder
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
-    private final String name;
+    public String name;
 
     public static User fromString(String name) {
         return User.builder().name(name).build();

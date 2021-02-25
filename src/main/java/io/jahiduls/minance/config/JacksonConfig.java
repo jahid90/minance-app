@@ -1,4 +1,4 @@
-package io.jahiduls.minance;
+package io.jahiduls.minance.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

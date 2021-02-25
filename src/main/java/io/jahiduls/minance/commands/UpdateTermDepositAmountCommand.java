@@ -1,6 +1,6 @@
 package io.jahiduls.minance.commands;
 
-import io.jahiduls.minance.model.Amount;
+import io.jahiduls.minance.models.AmountImpl;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -12,5 +12,5 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 @EqualsAndHashCode
 public class UpdateTermDepositAmountCommand {
     @TargetAggregateIdentifier public final UUID id;
-    public final Amount amount;
+    public final AmountImpl amount;
 }

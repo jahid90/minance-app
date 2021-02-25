@@ -1,6 +1,6 @@
-package io.jahiduls.minance.repository;
+package io.jahiduls.minance.repositories;
 
-import io.jahiduls.minance.model.TermDepositIdsView;
+import io.jahiduls.minance.views.TermDepositIdsView;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

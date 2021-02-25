@@ -1,6 +1,12 @@
-package io.jahiduls.minance.model;
+package io.jahiduls.minance.views;
 
 import io.jahiduls.minance.aggregates.TermDepositAggregate;
+import io.jahiduls.minance.models.Amount;
+import io.jahiduls.minance.models.Date;
+import io.jahiduls.minance.models.InterestRate;
+import io.jahiduls.minance.models.InvestmentPeriod;
+import io.jahiduls.minance.models.MaturityInstruction;
+import io.jahiduls.minance.models.User;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

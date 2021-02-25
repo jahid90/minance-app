@@ -1,6 +1,6 @@
 package io.jahiduls.minance.events;
 
-import io.jahiduls.minance.model.InterestRate;
+import io.jahiduls.minance.models.InterestRate;
 import java.util.UUID;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
