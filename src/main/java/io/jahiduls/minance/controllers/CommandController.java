@@ -29,9 +29,9 @@ public class CommandController {
         log.debug("Received resource: {}", resource);
         final UUID depositId = UUID.randomUUID();
         final LocalDate create = LocalDate.now();
-        // The first command creates the aggregate; others execute first sometimes and fail to find the aggregate; but why?
-        // shouldn't command bus handle the ordering?
-        commandGateway.send(CreateTermDepositCommand.builder().id(depositId).createdOn(create).build());
+        // The other commands depend on completion of the first one which creates the aggregate
+        // Let's wait for its completion before firing off the remaining commands, else they might not find the aggregate
+        commandGateway.sendAndWait(CreateTermDepositCommand.builder().id(depositId).createdOn(create).build());
         commandGateway.send(UpdateTermDepositAmountCommand.builder().id(depositId).amount(resource.amount).build());
         commandGateway.send(UpdateTermDepositPeriodCommand.builder().id(depositId).period(resource.period).build());
         commandGateway.send(UpdateTermDepositMaturityInstructionCommand.builder()
