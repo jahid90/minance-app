@@ -7,6 +7,8 @@ import com.google.common.cache.LoadingCache;
 import io.jahiduls.minance.aggregates.TermDepositAggregate;
 import io.jahiduls.minance.events.TermDepositAmountUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositCreatedEvent;
+import io.jahiduls.minance.events.TermDepositDepositorUpdatedEvent;
+import io.jahiduls.minance.events.TermDepositInterestRateUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositMaturityInstructionUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositPeriodUpdatedEvent;
 import io.jahiduls.minance.model.TermDepositView;
@@ -65,6 +67,10 @@ public class TermDepositCache {
                         aggregate.on(((TermDepositAmountUpdatedEvent) event.getPayload()));
                     } else if (TermDepositMaturityInstructionUpdatedEvent.class.equals(eventClass)) {
                         aggregate.on(((TermDepositMaturityInstructionUpdatedEvent) event.getPayload()));
+                    } else if (TermDepositDepositorUpdatedEvent.class.equals(eventClass)) {
+                        aggregate.on(((TermDepositDepositorUpdatedEvent) event.getPayload()));
+                    } else if (TermDepositInterestRateUpdatedEvent.class.equals(eventClass)) {
+                        aggregate.on(((TermDepositInterestRateUpdatedEvent) event.getPayload()));
                     } else {
                         log.warn("[{}] Ignoring unknown event type: {}", id, eventClass);
                     }

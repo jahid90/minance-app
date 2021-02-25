@@ -1,8 +1,11 @@
 package io.jahiduls.minance.resources;
 
 import io.jahiduls.minance.model.Amount;
+import io.jahiduls.minance.model.Date;
 import io.jahiduls.minance.model.InvestmentPeriod;
 import io.jahiduls.minance.model.MaturityInstruction;
+import io.jahiduls.minance.model.InterestRate;
+import io.jahiduls.minance.model.User;
 import lombok.ToString;
 
 /**
@@ -25,7 +28,11 @@ import lombok.ToString;
  */
 @ToString
 public class TermDepositResource {
-    public InvestmentPeriod period;
+    public User user;
+    public Date createdOn;
+    public String depositor;
     public Amount amount;
+    public InvestmentPeriod period;
+    public InterestRate interestRate;
     public MaturityInstruction maturity;
 }

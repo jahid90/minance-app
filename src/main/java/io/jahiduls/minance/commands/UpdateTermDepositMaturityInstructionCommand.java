@@ -12,6 +12,6 @@ import org.axonframework.modelling.command.TargetAggregateIdentifier;
 @EqualsAndHashCode
 public class UpdateTermDepositMaturityInstructionCommand {
     @TargetAggregateIdentifier public final UUID id;
-    public final MaturityInstruction maturityInstruction;
+    public final MaturityInstruction maturity;
 
 }

@@ -2,16 +2,22 @@ package io.jahiduls.minance.aggregates;
 
 import io.jahiduls.minance.commands.CreateTermDepositCommand;
 import io.jahiduls.minance.commands.UpdateTermDepositAmountCommand;
+import io.jahiduls.minance.commands.UpdateTermDepositDepositorCommand;
+import io.jahiduls.minance.commands.UpdateTermDepositInterestRateCommand;
 import io.jahiduls.minance.commands.UpdateTermDepositMaturityInstructionCommand;
 import io.jahiduls.minance.commands.UpdateTermDepositPeriodCommand;
 import io.jahiduls.minance.events.TermDepositAmountUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositCreatedEvent;
+import io.jahiduls.minance.events.TermDepositDepositorUpdatedEvent;
+import io.jahiduls.minance.events.TermDepositInterestRateUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositMaturityInstructionUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositPeriodUpdatedEvent;
 import io.jahiduls.minance.model.Amount;
+import io.jahiduls.minance.model.Date;
 import io.jahiduls.minance.model.InvestmentPeriod;
 import io.jahiduls.minance.model.MaturityInstruction;
-import java.time.LocalDate;
+import io.jahiduls.minance.model.InterestRate;
+import io.jahiduls.minance.model.User;
 import java.util.UUID;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,21 +39,30 @@ import org.axonframework.spring.stereotype.Aggregate;
 public class TermDepositAggregate {
 
     @AggregateIdentifier private UUID uuid;
-    private LocalDate createdOn;
-    private InvestmentPeriod period;
+    private User user;
+    private Date createdOn;
+    private String depositor;
     private Amount amount;
+    private InvestmentPeriod period;
+    private InterestRate interestRate;
     private MaturityInstruction maturityInstruction;
+
+    private void logAndDispatch(Object event) {
+
+        log.debug("Dispatching event: {}", event);
+        AggregateLifecycle.apply(event);
+    }
 
     @CommandHandler
     public TermDepositAggregate(CreateTermDepositCommand command) {
 
         final TermDepositCreatedEvent event = TermDepositCreatedEvent.builder()
                 .id(command.id)
+                .user(command.user)
                 .createdOn(command.createdOn)
                 .build();
 
-        log.debug("Dispatching event: {}", event);
-        AggregateLifecycle.apply(event);
+        logAndDispatch(event);
     }
 
     @CommandHandler
@@ -58,8 +73,7 @@ public class TermDepositAggregate {
                 .amount(command.amount)
                 .build();
 
-        log.debug("Dispatching event: {}", event);
-        AggregateLifecycle.apply(event);
+        logAndDispatch(event);
     }
 
     @CommandHandler
@@ -70,8 +84,7 @@ public class TermDepositAggregate {
                 .period(command.period)
                 .build();
 
-        log.debug("Dispatching event: {}", event);
-        AggregateLifecycle.apply(event);
+        logAndDispatch(event);
     }
 
     @CommandHandler
@@ -79,47 +92,75 @@ public class TermDepositAggregate {
 
         final TermDepositMaturityInstructionUpdatedEvent event = TermDepositMaturityInstructionUpdatedEvent.builder()
                 .id(command.id)
-                .maturityInstruction(command.maturityInstruction)
+                .maturityInstruction(command.maturity)
                 .build();
 
-        log.debug("Dispatching event: {}", event);
-        AggregateLifecycle.apply(event);
+        logAndDispatch(event);
+    }
+
+    @CommandHandler
+    private void handle(UpdateTermDepositDepositorCommand command) {
+
+        final TermDepositDepositorUpdatedEvent event = TermDepositDepositorUpdatedEvent.builder()
+                .id(command.id)
+                .depositor(command.depositor)
+                .build();
+
+        logAndDispatch(event);
+    }
+
+    @CommandHandler
+    private void handle(UpdateTermDepositInterestRateCommand command) {
+
+        final TermDepositInterestRateUpdatedEvent event = TermDepositInterestRateUpdatedEvent.builder()
+                .id(command.id)
+                .interestRate(command.interestRate)
+                .build();
+
+        logAndDispatch(event);
     }
 
     @EventSourcingHandler
     public void on(TermDepositCreatedEvent event) {
 
         log.debug("Handling event: {}", event);
-        log.debug("[BEFORE] {}", this);
         this.uuid = event.id;
+        this.user = event.user;
         this.createdOn = event.createdOn;
-        log.debug("[AFTER] {}", this);
     }
 
     @EventSourcingHandler
     public void on(TermDepositAmountUpdatedEvent event) {
 
         log.debug("Handling event: {}", event);
-        log.debug("[BEFORE] {}", this);
         this.amount = event.amount;
-        log.debug("[AFTER] {}", this);
     }
 
     @EventSourcingHandler
     public void on(TermDepositPeriodUpdatedEvent event) {
 
         log.debug("Handling event: {}", event);
-        log.debug("[BEFORE] {}", this);
         this.period = event.period;
-        log.debug("[AFTER] {}", this);
     }
 
     @EventSourcingHandler
     public void on(TermDepositMaturityInstructionUpdatedEvent event) {
 
         log.debug("Handling event: {}", event);
-        log.debug("[BEFORE] {}", this);
         this.maturityInstruction = event.maturityInstruction;
-        log.debug("[AFTER] {}", this);
+    }
+
+    @EventSourcingHandler
+    public void on(TermDepositDepositorUpdatedEvent event) {
+
+        log.debug("Handling event: {}", event);
+        this.depositor = event.depositor;
+    }
+
+    @EventSourcingHandler
+    public void on(TermDepositInterestRateUpdatedEvent event) {
+
+        log.debug("Handling event: {}", event);
+        this.interestRate = event.interestRate;
     }
 }

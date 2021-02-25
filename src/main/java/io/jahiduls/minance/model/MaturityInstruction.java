@@ -2,7 +2,9 @@ package io.jahiduls.minance.model;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public enum MaturityInstruction {
 
     NONE("none"),
@@ -14,7 +16,4 @@ public enum MaturityInstruction {
     @JsonValue @Getter
     private final String value;
 
-    MaturityInstruction(final String value) {
-        this.value = value;
-    }
 }
