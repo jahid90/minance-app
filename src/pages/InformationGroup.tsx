@@ -1,7 +1,7 @@
 import { lazy } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Segment } from 'semantic-ui-react';
 
-const InformationCard = lazy(() => import('./InformationCard'));
+const InformationCard = lazy(() => import('../components/InformationCard'));
 
 const data = [
     {
@@ -44,19 +44,21 @@ const data = [
 
 const InformationGroup = () => {
     return (
-        <Card.Group className='information-cards'>
-            {data
-                .sort((a, b) => a.date.getTime() - b.date.getTime())
-                .map((item) => (
-                    <InformationCard
-                        key={item.id}
-                        item={item}
-                        type={item.id === 1 ? 'Expiring' : item.id === 2 ? 'Vesting' : 'Renewal'}
-                    />
-                ))}
-            <Card className='information-card dummy' />
-            <Card className='information-card dummy' />
-        </Card.Group>
+        <Segment secondary className='information-group-container page-container'>
+            <Card.Group className='information-cards'>
+                {data
+                    .sort((a, b) => a.date.getTime() - b.date.getTime())
+                    .map((item) => (
+                        <InformationCard
+                            key={item.id}
+                            item={item}
+                            type={item.id === 1 ? 'Expiring' : item.id === 2 ? 'Vesting' : 'Renewal'}
+                        />
+                    ))}
+                <Card className='information-card dummy hidden' />
+                <Card className='information-card dummy hidden' />
+            </Card.Group>
+        </Segment>
     );
 };
 

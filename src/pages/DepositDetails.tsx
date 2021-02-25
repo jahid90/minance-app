@@ -5,14 +5,14 @@ interface Params {
     id: string;
 }
 
-const InformationDetail = () => {
+const DepositDetails = () => {
     const { id }: Params = useParams();
 
     return (
-        <Segment secondary className='information-details-container page-container'>
-            Details for entry #{id} here.
+        <Segment secondary className='deposit-details-container page-container'>
+            Details for deposit #{id} here.
         </Segment>
     )
 };
 
-export default InformationDetail;
+export default DepositDetails;

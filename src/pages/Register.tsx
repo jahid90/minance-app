@@ -35,8 +35,8 @@ const Register = () => {
     };
 
     return (
-        <Segment secondary className='form-container'>
-            <Form className='login-form form' onSubmit={handleSubmit}>
+        <Segment secondary className='form-container page-container w600'>
+            <Form className='login-form form centered columnar' onSubmit={handleSubmit}>
                 <h1>Register</h1>
                 <Icon name='user' className='profile-image' size='massive'/>
                 <Form.Field className='form-field-container'>

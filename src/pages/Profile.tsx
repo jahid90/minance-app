@@ -18,7 +18,7 @@ const Profile = () => {
     };
 
     return (
-        <Segment secondary className='profile-content'>
+        <Segment secondary className='profile-container page-container'>
             <p>Hi {decoded.username || 'stranger'}! This is the profile page.</p>
 
             <Segment tertiary>

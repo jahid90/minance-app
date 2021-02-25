@@ -10,19 +10,40 @@ html, body {
     margin: 20px auto;
 }
 
-.app .app-content {
-    width: 100%;
+.app .centered {
     display: flex;
-    justify-content: center;
-}
-
-.app .home-content {
-    width: 800px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.app .columnar {
+    display: flex;
+    flex-direction: column;
+}
+
+.app .h500 {
+    height: 500px !important;
+}
+
+.app .w600 {
+    width: 600px !important;
+}
+
+.app .floated-right {
+    float: right;
+}
+
+.app .hidden {
+    visibility: hidden;
+}
+
+.app .page-container {
+    width: 1024px;
+    max-width: 1024px;
+    padding: 10px;
+}
+
+.app .home-container.page-container {
     font-size: 20px;
 }
 
@@ -38,22 +59,18 @@ html, body {
     height: 0;
     padding: 0;
     margin: 0;
-    visibility: hidden;
 }
 
 .app .profile-image {
     margin: 20px 0px 40px 0px;
 }
 
-.app .form-container {
-    width: 600px;
+.app .form-container.page-container {
+    margin: auto;
     padding: 30px !important;
 }
 
 .app .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0px auto;
     width: 100%;
     line-height: 30px;
@@ -77,13 +94,4 @@ html, body {
     width: 600px;
     margin-top: 75px;
     font-size: 16px;
-}
-
-.app .profile-content {
-    width: 100%;
-    padding: 20px;
-}
-
-.app .floated-right {
-    float: right;
 }

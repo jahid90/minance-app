@@ -16,6 +16,13 @@ const Nav = () => {
             </Menu.Item>
             <Menu.Item
                 as={Link}
+                to='/deposits'
+                name='deposits'
+                active={activeItem === 'deposits'}
+                onClick={() => setActiveItem('deposits')}
+            />
+            <Menu.Item
+                as={Link}
                 to='/past-events'
                 name='past events'
                 active={activeItem === 'past-events'}
