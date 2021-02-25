@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Label, List, Segment } from 'semantic-ui-react';
 import { useAppContext } from '../context/AppContextProvider';
 
-import { getAllDepositsForUser } from '../services/backend-service';
+import { getAllForUser } from '../services/backend-service';
 import { decode } from '../services/token';
 
 const Deposits = () => {
@@ -15,7 +15,7 @@ const Deposits = () => {
     useEffect(() => {
         (async () => {
             try {
-                const result = await getAllDepositsForUser(decoded.username);
+                const result = await getAllForUser(decoded.username);
                 setDeposits(result.data);
             } catch (e) {
                 console.error(e);
