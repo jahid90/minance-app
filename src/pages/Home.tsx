@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { Segment } from 'semantic-ui-react';
 import { useAppContext } from '../context/AppContextProvider';
 
-const Transactions = lazy(() => import('../components/Transactions'));
+const InformationGroup = lazy(() => import('../components/InformationGroup'));
 
 const Home = () => {
     const { token } = useAppContext();
 
     return (
         <>
-            {token && <Transactions />}
+            {token && <InformationGroup />}
             {!token && (
                 <Segment secondary className='home-content'>
                     <p>You need to be logged in to view this content.</p>

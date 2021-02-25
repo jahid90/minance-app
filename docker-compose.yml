@@ -8,8 +8,8 @@ networks:
 services:
   web:
     build: .
-    image: transaction.react:local
-    container_name: transaction-react
+    image: minance.react:local
+    container_name: minance-react
     restart: unless-stopped
     expose:
       - 80

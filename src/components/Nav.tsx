@@ -12,7 +12,7 @@ const Nav = () => {
     return (
         <Menu size='huge'>
             <Menu.Item header as={Link} to='/'>
-                Transact
+                Minance
             </Menu.Item>
             <Menu.Item
                 as={Link}

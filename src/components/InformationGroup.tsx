@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Card } from 'semantic-ui-react';
 
-const TransactionCard = lazy(() => import('./TransactionCard'));
+const InformationCard = lazy(() => import('./InformationCard'));
 
 const data = [
     {
@@ -42,22 +42,22 @@ const data = [
     },
 ];
 
-const Transactions = () => {
+const InformationGroup = () => {
     return (
-        <Card.Group className='transaction-cards'>
+        <Card.Group className='information-cards'>
             {data
                 .sort((a, b) => a.date.getTime() - b.date.getTime())
                 .map((item) => (
-                    <TransactionCard
+                    <InformationCard
                         key={item.id}
                         item={item}
                         type={item.id === 1 ? 'Expiring' : item.id === 2 ? 'Vesting' : 'Renewal'}
                     />
                 ))}
-            <Card className='transaction-card dummy' />
-            <Card className='transaction-card dummy' />
+            <Card className='information-card dummy' />
+            <Card className='information-card dummy' />
         </Card.Group>
     );
 };
 
-export default Transactions;
+export default InformationGroup;

@@ -1,4 +1,4 @@
-export interface ITransaction {
+export interface IInformation {
     id: number;
     title: string;
     date: Date;
@@ -8,6 +8,6 @@ export interface ITransaction {
     };
 }
 
-const Transaction = {};
+const Information = {};
 
-export default Transaction;
+export default Information;

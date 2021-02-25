@@ -26,15 +26,15 @@ html, body {
     font-size: 20px;
 }
 
-.app .transaction-cards {
+.app .information-cards {
     justify-content: space-around;
 }
 
-.app .transaction-cards .transaction-card {
+.app .information-cards .information-card {
     width: 30% !important;
 }
 
-.app .transaction-cards .dummy {
+.app .information-cards .dummy {
     height: 0;
     padding: 0;
     margin: 0;

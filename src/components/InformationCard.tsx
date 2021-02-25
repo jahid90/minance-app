@@ -4,18 +4,18 @@ import { useHistory } from 'react-router-dom';
 import { Button, Card, Icon } from 'semantic-ui-react';
 
 import Money from './Money';
-import { ITransaction } from '../models/Transaction';
+import { IInformation } from '../models/Information';
 
 interface Props {
-    item: ITransaction;
+    item: IInformation;
     type: string;
 }
 
-const TransactionCard = ({ item, type }: Props) => {
+const InformationCard = ({ item, type }: Props) => {
     const history = useHistory();
 
     return (
-        <Card className='transaction-card'>
+        <Card className='information-card'>
             <Card.Content>
                 <Icon name='file alternate' className='profile-image floated-right' size='big' />
                 <Card.Header>{item.title}</Card.Header>
@@ -28,7 +28,7 @@ const TransactionCard = ({ item, type }: Props) => {
             </Card.Content>
             <Card.Content extra>
                 <div className='ui two buttons'>
-                    <Button basic color='green' onClick={() => history.push(`/transaction/${item.id}`)}>
+                    <Button basic color='green' onClick={() => history.push(`/information/${item.id}`)}>
                         Details
                     </Button>
                     <Button basic color='blue' onClick={() => history.push(`/investment/${item.id}`)}>
@@ -40,4 +40,4 @@ const TransactionCard = ({ item, type }: Props) => {
     );
 };
 
-export default TransactionCard;
+export default InformationCard;

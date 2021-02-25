@@ -11,7 +11,7 @@ const Login = lazy(() => import('../pages/Login'));
 const PageNotFound = lazy(() => import('../pages/PageNotFound'));
 const Profile = lazy(() => import('../pages/Profile'));
 const Register = lazy(() => import('../pages/Register'));
-const TransactionDetail = lazy(() => import('../pages/TransactionDetail'));
+const InformationDetail = lazy(() => import('../pages/InformationDetail'));
 
 const Routes = () => {
     return (
@@ -21,7 +21,7 @@ const Routes = () => {
                 <Suspense fallback='Loading...'>
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <AuthenticatedRoute exact path='/transaction/:id' component={TransactionDetail} />
+                        <AuthenticatedRoute exact path='/information/:id' component={InformationDetail} />
                         <AuthenticatedRoute exact path='/investment/:id' component={InvestmentDetail} />
                         <UnauthenticatedRoute exact path='/login' component={Login} />
                         <UnauthenticatedRoute exact path='/register' component={Register} />
