@@ -1,6 +1,8 @@
 package io.jahiduls.minance.controllers;
 
+import com.google.common.cache.CacheStats;
 import io.jahiduls.minance.model.TermDepositView;
+import io.jahiduls.minance.queries.GetCacheStatsQuery;
 import io.jahiduls.minance.queries.GetAllTermDepositsQuery;
 import io.jahiduls.minance.queries.GetTermDepositQuery;
 import java.util.List;
@@ -37,6 +39,11 @@ public class QueryController {
         log.debug("Received get one query for id: {}", depositId);
         return queryGateway.query(GetTermDepositQuery.builder().id(depositId).build(),
                 ResponseTypes.instanceOf(TermDepositView.class));
+    }
+
+    @GetMapping("/cache/stats")
+    private CompletableFuture<CacheStats> cacheStats() {
+        return queryGateway.query(GetCacheStatsQuery.builder().build(), ResponseTypes.instanceOf(CacheStats.class));
     }
 
 }

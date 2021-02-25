@@ -1,11 +1,7 @@
 package io.jahiduls.minance.projectors;
 
-import io.jahiduls.minance.aggregates.TermDepositAggregate;
-import io.jahiduls.minance.events.TermDepositAmountUpdatedEvent;
 import io.jahiduls.minance.events.TermDepositCreatedEvent;
-import io.jahiduls.minance.events.TermDepositMaturityInstructionUpdatedEvent;
-import io.jahiduls.minance.events.TermDepositPeriodUpdatedEvent;
-import io.jahiduls.minance.helpers.Strings;
+import io.jahiduls.minance.helpers.TermDepositCache;
 import io.jahiduls.minance.model.TermDepositIdsView;
 import io.jahiduls.minance.model.TermDepositView;
 import io.jahiduls.minance.queries.GetAllTermDepositsQuery;
@@ -15,10 +11,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
-import org.axonframework.eventhandling.DomainEventMessage;
 import org.axonframework.eventhandling.EventHandler;
-import org.axonframework.eventsourcing.eventstore.DomainEventStream;
-import org.axonframework.eventsourcing.eventstore.EventStore;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,35 +36,11 @@ public class TermDepositProjector {
     }
 
     @QueryHandler
-    private TermDepositView on(GetTermDepositQuery query, @Autowired EventStore store) {
+    private TermDepositView on(GetTermDepositQuery query, @Autowired TermDepositCache cache) {
 
         log.debug("Handling query: {}", query);
-        DomainEventStream eventStream = store.readEvents(query.id.toString());
-        if (!eventStream.hasNext()) {
-            throw new RuntimeException(Strings.format("[{}] No such term deposit found.", query.id));
-        }
+        return cache.lookup(query.id);
 
-        TermDepositAggregate aggregate = new TermDepositAggregate();
-        while (eventStream.hasNext()) {
-            DomainEventMessage<?> event = eventStream.next();
-            Class<?> eventClass = event.getPayloadType().getNestHost();
-
-            log.trace("[{}] Processing event message: {}", query.id, event);
-
-            if (TermDepositCreatedEvent.class.equals(eventClass)) {
-                aggregate.on(((TermDepositCreatedEvent) event.getPayload()));
-            } else if (TermDepositPeriodUpdatedEvent.class.equals(eventClass)) {
-                aggregate.on(((TermDepositPeriodUpdatedEvent) event.getPayload()));
-            } else if (TermDepositAmountUpdatedEvent.class.equals(eventClass)) {
-                aggregate.on(((TermDepositAmountUpdatedEvent) event.getPayload()));
-            } else if (TermDepositMaturityInstructionUpdatedEvent.class.equals(eventClass)) {
-                aggregate.on(((TermDepositMaturityInstructionUpdatedEvent) event.getPayload()));
-            } else {
-                log.warn("[{}] Ignoring unknown event type: {}", query.id, eventClass);
-            }
-        }
-
-        return TermDepositView.from(aggregate);
     }
 
 }
