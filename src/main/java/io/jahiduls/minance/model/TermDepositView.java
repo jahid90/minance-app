@@ -1,28 +1,29 @@
 package io.jahiduls.minance.model;
 
+import io.jahiduls.minance.aggregates.TermDepositAggregate;
 import java.time.LocalDate;
 import java.util.UUID;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
-@Getter
 @Builder
 @ToString
 @EqualsAndHashCode
-@NoArgsConstructor
-@AllArgsConstructor
 public class TermDepositView {
-    @Id
-    private UUID id;
-    private LocalDate createdOn;
-    private InvestmentPeriod period;
-    private Amount amount;
-    private MaturityInstruction maturityInstruction;
+    public final UUID id;
+    public final LocalDate createdOn;
+    public final InvestmentPeriod period;
+    public final Amount amount;
+    public final MaturityInstruction maturityInstruction;
+
+    public static TermDepositView from(TermDepositAggregate aggregate) {
+        return TermDepositView.builder()
+                .id(aggregate.getUuid())
+                .createdOn(aggregate.getCreatedOn())
+                .period(aggregate.getPeriod())
+                .amount(aggregate.getAmount())
+                .maturityInstruction(aggregate.getMaturityInstruction())
+                .build();
+    }
 }

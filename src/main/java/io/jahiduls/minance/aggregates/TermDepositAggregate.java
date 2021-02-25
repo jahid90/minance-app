@@ -13,8 +13,8 @@ import io.jahiduls.minance.model.InvestmentPeriod;
 import io.jahiduls.minance.model.MaturityInstruction;
 import java.time.LocalDate;
 import java.util.UUID;
-import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +26,7 @@ import org.axonframework.spring.stereotype.Aggregate;
 
 @Slf4j
 @Aggregate
+@Getter
 @ToString
 @EqualsAndHashCode
 @NoArgsConstructor
@@ -86,7 +87,7 @@ public class TermDepositAggregate {
     }
 
     @EventSourcingHandler
-    private void on(TermDepositCreatedEvent event) {
+    public void on(TermDepositCreatedEvent event) {
 
         log.debug("Handling event: {}", event);
         log.debug("[BEFORE] {}", this);
@@ -96,7 +97,7 @@ public class TermDepositAggregate {
     }
 
     @EventSourcingHandler
-    private void on(TermDepositAmountUpdatedEvent event) {
+    public void on(TermDepositAmountUpdatedEvent event) {
 
         log.debug("Handling event: {}", event);
         log.debug("[BEFORE] {}", this);
@@ -105,7 +106,7 @@ public class TermDepositAggregate {
     }
 
     @EventSourcingHandler
-    private void on(TermDepositPeriodUpdatedEvent event) {
+    public void on(TermDepositPeriodUpdatedEvent event) {
 
         log.debug("Handling event: {}", event);
         log.debug("[BEFORE] {}", this);
@@ -114,7 +115,7 @@ public class TermDepositAggregate {
     }
 
     @EventSourcingHandler
-    private void on(TermDepositMaturityInstructionUpdatedEvent event) {
+    public void on(TermDepositMaturityInstructionUpdatedEvent event) {
 
         log.debug("Handling event: {}", event);
         log.debug("[BEFORE] {}", this);
