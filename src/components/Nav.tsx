@@ -11,9 +11,19 @@ const Nav = () => {
 
     return (
         <Menu size='huge' className='app-nav'>
-            <Menu.Item header as={Link} to='/'>
+            <Menu.Item
+                header
+                href='/'
+            >
                 Minance
             </Menu.Item>
+            <Menu.Item
+                as={Link}
+                to='/'
+                name='home'
+                active={activeItem === 'home'}
+                onClick={() => setActiveItem('home')}
+            />
             <Menu.Item
                 as={Link}
                 to='/deposits'
