@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Label, List, Segment } from 'semantic-ui-react';
-import { useAppContext } from '../context/AppContextProvider';
+import { Card, Label, Segment } from 'semantic-ui-react';
 
+import DepositCard from '../components/DepositCard';
+import { useAppContext } from '../context/AppContextProvider';
 import { getAllForUser } from '../services/backend-service';
 import { decode } from '../services/token';
 
 const Deposits = () => {
     const [deposits, setDeposits] = useState([]);
     const { token } = useAppContext();
-    const history = useHistory();
     const decoded = decode(token);
 
     useEffect(() => {
@@ -25,16 +24,19 @@ const Deposits = () => {
 
     return (
         <Segment secondary className='deposits-container page-container'>
-            <Label>Here's the list of all your deposits</Label>
-            <List>
-            {deposits.map((deposit) => (
-                <List.Item>
-                    <Label basic color='blue' as='a' onClick={() => history.push(`/deposit/${deposit}`)}>
-                        See details of ${deposit}
-                    </Label>
-                </List.Item>
-            ))}
-            </List>
+            {deposits.length === 0 ? (
+                <Label basic color='yellow' className='deposit-header'>
+                    No deposits were found.
+                </Label>
+            ) : (
+                <Card.Group className='information-cards'>
+                    {deposits.map((id) => (
+                        <DepositCard key={id} item={{ id }} />
+                    ))}
+                    <Card className='information-card dummy hidden' />
+                    <Card className='information-card dummy hidden' />
+                </Card.Group>
+            )}
         </Segment>
     );
 };

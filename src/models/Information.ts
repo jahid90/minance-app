@@ -7,7 +7,3 @@ export interface IInformation {
         paise: number;
     };
 }
-
-const Information = {};
-
-export default Information;
