@@ -1,5 +1,5 @@
 html, body {
-    background-color: lightgrey !important;
+    background-color: #808080 !important;
     width: 100%;
     height: 100%;
 }
@@ -37,10 +37,15 @@ html, body {
     visibility: hidden;
 }
 
+.app .app-nav {
+    box-shadow: 5px 4px 4px 2px #707070;
+}
+
 .app .page-container {
     width: 1024px;
     max-width: 1024px;
     padding: 10px;
+    box-shadow: 5px 8px 4px 2px #707070;
 }
 
 .app .home-container.page-container {

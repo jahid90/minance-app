@@ -10,7 +10,7 @@ const Nav = () => {
     const { token: loggedIn } = useAppContext();
 
     return (
-        <Menu size='huge'>
+        <Menu size='huge' className='app-nav'>
             <Menu.Item header as={Link} to='/'>
                 Minance
             </Menu.Item>
