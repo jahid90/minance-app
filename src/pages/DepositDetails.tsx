@@ -22,7 +22,7 @@ const DepositDetails = () => {
                 console.error(e);
             }
         })();
-    }, []);
+    });
 
     return (
         <Segment secondary className='deposit-details-container page-container'>
