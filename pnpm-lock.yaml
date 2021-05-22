@@ -10,7 +10,7 @@ specifiers:
   '@types/react-dom': 17.0.5
   '@types/react-router-dom': 5.1.7
   axios: 0.21.1
-  eslint: 7.26.0
+  eslint: 7.27.0
   jwt-decode: 3.1.2
   moment: 2.29.1
   prettier: 2.3.0
@@ -43,7 +43,7 @@ devDependencies:
   '@types/react': 17.0.6
   '@types/react-dom': 17.0.5
   '@types/react-router-dom': 5.1.7
-  eslint: 7.26.0
+  eslint: 7.27.0
   prettier: 2.3.0
 
 packages:
@@ -2552,6 +2552,16 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+    dev: false
+
+  /ajv/8.5.0:
+    resolution: {integrity: sha512-Y2l399Tt1AguU3BPRP9Fn4eN+Or+StUGWCUpbnFyXSo8NZ9S4uj+AG2pjs5apK+ZMOwYOz1+a+VKvKH7CudXgQ==}
+    dependencies:
+      fast-deep-equal: 3.1.3
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+      uri-js: 4.4.1
+    dev: true
 
   /alphanum-sort/1.0.2:
     resolution: {integrity: sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=}
@@ -4636,6 +4646,11 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /escape-string-regexp/4.0.0:
+    resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
+    engines: {node: '>=10'}
+    dev: true
+
   /escodegen/1.14.3:
     resolution: {integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==}
     engines: {node: '>=4.0'}
@@ -4897,6 +4912,55 @@ packages:
       v8-compile-cache: 2.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /eslint/7.27.0:
+    resolution: {integrity: sha512-JZuR6La2ZF0UD384lcbnd0Cgg6QJjiCwhMD6eU4h/VGPcVGwawNNzKU41tgokGXnfjOOyI6QIffthhJTPzzuRA==}
+    engines: {node: ^10.12.0 || >=12.0.0}
+    hasBin: true
+    dependencies:
+      '@babel/code-frame': 7.12.11
+      '@eslint/eslintrc': 0.4.1
+      ajv: 6.12.6
+      chalk: 4.1.0
+      cross-spawn: 7.0.3
+      debug: 4.3.1
+      doctrine: 3.0.0
+      enquirer: 2.3.6
+      escape-string-regexp: 4.0.0
+      eslint-scope: 5.1.1
+      eslint-utils: 2.1.0
+      eslint-visitor-keys: 2.0.0
+      espree: 7.3.1
+      esquery: 1.4.0
+      esutils: 2.0.3
+      fast-deep-equal: 3.1.3
+      file-entry-cache: 6.0.1
+      functional-red-black-tree: 1.0.1
+      glob-parent: 5.1.1
+      globals: 13.8.0
+      ignore: 4.0.6
+      import-fresh: 3.3.0
+      imurmurhash: 0.1.4
+      is-glob: 4.0.1
+      js-yaml: 3.14.1
+      json-stable-stringify-without-jsonify: 1.0.1
+      levn: 0.4.1
+      lodash.merge: 4.6.2
+      minimatch: 3.0.4
+      natural-compare: 1.4.0
+      optionator: 0.9.1
+      progress: 2.0.3
+      regexpp: 3.1.0
+      semver: 7.3.4
+      strip-ansi: 6.0.0
+      strip-json-comments: 3.1.1
+      table: 6.7.1
+      text-table: 0.2.0
+      v8-compile-cache: 2.2.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /espree/7.3.1:
     resolution: {integrity: sha512-v3JCNCE64umkFpmkFGqzVKsOT0tN1Zr+ueqLZfpV1Ob8e+CEgPWa+OxCoGH3tnhimMKIaBm4m/vaRpJ/krRz2g==}
@@ -7229,9 +7293,17 @@ packages:
     resolution: {integrity: sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=}
     dev: false
 
+  /lodash.clonedeep/4.5.0:
+    resolution: {integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=}
+    dev: true
+
   /lodash.memoize/4.1.2:
     resolution: {integrity: sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=}
     dev: false
+
+  /lodash.merge/4.6.2:
+    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=}
@@ -7250,6 +7322,10 @@ packages:
       lodash._reinterpolate: 3.0.0
     dev: false
 
+  /lodash.truncate/4.4.2:
+    resolution: {integrity: sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=}
+    dev: true
+
   /lodash.uniq/4.5.0:
     resolution: {integrity: sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=}
     dev: false
@@ -7260,6 +7336,7 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
 
   /loglevel/1.7.1:
     resolution: {integrity: sha512-Hesni4s5UkWkwCGJMQGAh71PaLUmKFM60dHvq0zi/vDhhrzuk+4GgNbTXJ12YYQJn6ZKBDNIjYcuQGKudvqrIw==}
@@ -10640,6 +10717,19 @@ packages:
       lodash: 4.17.21
       slice-ansi: 4.0.0
       string-width: 4.2.0
+    dev: false
+
+  /table/6.7.1:
+    resolution: {integrity: sha512-ZGum47Yi6KOOFDE8m223td53ath2enHcYLgOCjGr5ngu8bdIARQk6mN/wRMv4yMRcHnCSnHbCEha4sobQx5yWg==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      ajv: 8.5.0
+      lodash.clonedeep: 4.5.0
+      lodash.truncate: 4.4.2
+      slice-ansi: 4.0.0
+      string-width: 4.2.0
+      strip-ansi: 6.0.0
+    dev: true
 
   /tapable/1.1.3:
     resolution: {integrity: sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==}
