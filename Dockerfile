@@ -1,9 +1,14 @@
-FROM openjdk:11-jre-slim
+FROM adoptopenjdk:16-jdk as builder
 
-WORKDIR /minance
+WORKDIR /assets
 
-COPY build/libs/*.jar ./app.jar
+COPY . ./
+RUN ./gradlew --no-daemon bootJar
 
-EXPOSE 8080
+FROM adoptopenjdk:16-jre as production
 
-CMD ["java", "-jar", "/minance/app.jar"]
+WORKDIR /app
+
+COPY --from=builder /assets/build/libs/*.jar ./app.jar
+
+CMD ["java", "-jar", "./app.jar"]

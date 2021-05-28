@@ -1,2 +1,8 @@
-*
-!build/libs/*.jar
+.github/
+.dockerignore
+.gitignore
+docker-compose.yml
+Dockerfile
+HELP.md
+just.json
+renovate.json
