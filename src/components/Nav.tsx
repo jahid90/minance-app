@@ -13,7 +13,7 @@ const Nav = () => {
         <Menu size='huge' className='app-nav'>
             <Menu.Item
                 header
-                href='/'
+                href='/minance'
             >
                 Minance
             </Menu.Item>

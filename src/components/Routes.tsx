@@ -18,7 +18,7 @@ const InformationDetail = lazy(() => import('../pages/InformationDetail'));
 
 const Routes = () => {
     return (
-        <Router>
+        <Router basename='/minance'>
             <Nav />
             <Suspense fallback='Loading...'>
                 <Switch>
