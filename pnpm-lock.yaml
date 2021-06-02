@@ -5,7 +5,7 @@ specifiers:
   '@testing-library/react': 11.2.7
   '@testing-library/user-event': 13.1.9
   '@types/jest': 26.0.23
-  '@types/node': 14.17.1
+  '@types/node': 14.17.2
   '@types/react': 17.0.9
   '@types/react-dom': 17.0.6
   '@types/react-router-dom': 5.1.7
@@ -37,7 +37,7 @@ devDependencies:
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.1.9
   '@types/jest': 26.0.23
-  '@types/node': 14.17.1
+  '@types/node': 14.17.2
   '@types/react': 17.0.9
   '@types/react-dom': 17.0.6
   '@types/react-router-dom': 5.1.7
@@ -2087,8 +2087,8 @@ packages:
     resolution: {integrity: sha512-1x8W5OpxPq+T85OUsHRP6BqXeosKmeXRtjoF39STcdf/UWLqUsoehstZKOi0CunhVqHG17AyZgpj20eRVooK6A==}
     dev: true
 
-  /@types/node/14.17.1:
-    resolution: {integrity: sha512-/tpUyFD7meeooTRwl3sYlihx2BrJE7q9XF71EguPFIySj9B7qgnRtHsHTho+0AUm4m1SvWGm6uSncrR94q6Vtw==}
+  /@types/node/14.17.2:
+    resolution: {integrity: sha512-sld7b/xmFum66AAKuz/rp/CUO8+98fMpyQ3SBfzzBNGMd/1iHBTAg9oyAvcYlAj46bpc74r91jSw2iFdnx29nw==}
     dev: true
 
   /@types/normalize-package-data/2.4.0:
