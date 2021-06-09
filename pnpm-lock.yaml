@@ -6,7 +6,7 @@ specifiers:
   '@testing-library/user-event': 13.1.9
   '@types/jest': 26.0.23
   '@types/node': 14.17.3
-  '@types/react': 17.0.9
+  '@types/react': 17.0.10
   '@types/react-dom': 17.0.6
   '@types/react-router-dom': 5.1.7
   axios: 0.21.1
@@ -38,7 +38,7 @@ devDependencies:
   '@testing-library/user-event': 13.1.9
   '@types/jest': 26.0.23
   '@types/node': 14.17.3
-  '@types/react': 17.0.9
+  '@types/react': 17.0.10
   '@types/react-dom': 17.0.6
   '@types/react-router-dom': 5.1.7
   eslint: 7.28.0
@@ -2147,6 +2147,14 @@ packages:
     dependencies:
       '@types/history': 4.7.8
       '@types/react': 17.0.5
+    dev: true
+
+  /@types/react/17.0.10:
+    resolution: {integrity: sha512-+Tc5aGO49L/cjFBfpIPB398ztmAUChglc+a+EYlvphMOMvwUEzmLiyfmnEseGE7inMO6XiSffHmXVPC8GonksQ==}
+    dependencies:
+      '@types/prop-types': 15.7.3
+      '@types/scheduler': 0.16.1
+      csstype: 3.0.6
     dev: true
 
   /@types/react/17.0.5:
