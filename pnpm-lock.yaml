@@ -10,7 +10,7 @@ specifiers:
   '@types/react-dom': 17.0.8
   '@types/react-router-dom': 5.1.7
   axios: 0.21.1
-  eslint: 7.28.0
+  eslint: 7.29.0
   jwt-decode: 3.1.2
   moment: 2.29.1
   prettier: 2.3.1
@@ -41,7 +41,7 @@ devDependencies:
   '@types/react': 17.0.11
   '@types/react-dom': 17.0.8
   '@types/react-router-dom': 5.1.7
-  eslint: 7.28.0
+  eslint: 7.29.0
   prettier: 2.3.1
   react-scripts: 4.0.3_react@17.0.2+typescript@4.3.4
   typescript: 4.3.4
@@ -5017,8 +5017,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint/7.28.0:
-    resolution: {integrity: sha512-UMfH0VSjP0G4p3EWirscJEQ/cHqnT/iuH6oNZOB94nBjWbMnhGEPxsZm1eyIW0C/9jLI0Fow4W5DXLjEI7mn1g==}
+  /eslint/7.29.0:
+    resolution: {integrity: sha512-82G/JToB9qIy/ArBzIWG9xvvwL3R86AlCjtGw+A29OMZDqhTybz/MByORSukGxeI+YPCR4coYyITKk8BFH9nDA==}
     engines: {node: ^10.12.0 || >=12.0.0}
     hasBin: true
     dependencies:
@@ -5041,7 +5041,7 @@ packages:
       file-entry-cache: 6.0.1
       functional-red-black-tree: 1.0.1
       glob-parent: 5.1.2
-      globals: 13.8.0
+      globals: 13.9.0
       ignore: 4.0.6
       import-fresh: 3.3.0
       imurmurhash: 0.1.4
