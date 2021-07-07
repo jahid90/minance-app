@@ -8,7 +8,7 @@ specifiers:
   '@types/node': 14.17.5
   '@types/react': 17.0.14
   '@types/react-dom': 17.0.9
-  '@types/react-router-dom': 5.1.7
+  '@types/react-router-dom': 5.1.8
   axios: 0.21.1
   eslint: 7.30.0
   jwt-decode: 3.1.2
@@ -40,7 +40,7 @@ devDependencies:
   '@types/node': 14.17.5
   '@types/react': 17.0.14
   '@types/react-dom': 17.0.9
-  '@types/react-router-dom': 5.1.7
+  '@types/react-router-dom': 5.1.8
   eslint: 7.30.0
   prettier: 2.3.2
   react-scripts: 4.0.3_react@17.0.2+typescript@4.3.5
@@ -2298,11 +2298,11 @@ packages:
       '@types/react': 17.0.14
     dev: true
 
-  /@types/react-router-dom/5.1.7:
-    resolution: {integrity: sha512-D5mHD6TbdV/DNHYsnwBTv+y73ei+mMjrkGrla86HthE4/PVvL1J94Bu3qABU+COXzpL23T1EZapVVpwHuBXiUg==}
+  /@types/react-router-dom/5.1.8:
+    resolution: {integrity: sha512-03xHyncBzG0PmDmf8pf3rehtjY0NpUj7TIN46FrT5n1ZWHPZvXz32gUyNboJ+xsL8cpg8bQVLcllptcQHvocrw==}
     dependencies:
       '@types/history': 4.7.8
-      '@types/react': 17.0.11
+      '@types/react': 17.0.14
       '@types/react-router': 5.1.15
     dev: true
 
@@ -2310,15 +2310,7 @@ packages:
     resolution: {integrity: sha512-z3UlMG/x91SFEVmmvykk9FLTliDvfdIUky4k2rCfXWQ0NKbrP8o9BTCaCTPuYsB8gDkUnUmkcA2vYlm2DR+HAA==}
     dependencies:
       '@types/history': 4.7.8
-      '@types/react': 17.0.11
-    dev: true
-
-  /@types/react/17.0.11:
-    resolution: {integrity: sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==}
-    dependencies:
-      '@types/prop-types': 15.7.3
-      '@types/scheduler': 0.16.1
-      csstype: 3.0.8
+      '@types/react': 17.0.14
     dev: true
 
   /@types/react/17.0.14:
