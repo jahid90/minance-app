@@ -10,7 +10,7 @@ specifiers:
   '@types/react-dom': 17.0.9
   '@types/react-router-dom': 5.1.8
   axios: 0.21.1
-  eslint: 7.31.0
+  eslint: 7.32.0
   jwt-decode: 3.1.2
   moment: 2.29.1
   prettier: 2.3.2
@@ -41,7 +41,7 @@ devDependencies:
   '@types/react': 17.0.15
   '@types/react-dom': 17.0.9
   '@types/react-router-dom': 5.1.8
-  eslint: 7.31.0
+  eslint: 7.32.0
   prettier: 2.3.2
   react-scripts: 4.0.3_react@17.0.2+typescript@4.3.5
   typescript: 4.3.5
@@ -5225,8 +5225,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint/7.31.0:
-    resolution: {integrity: sha512-vafgJpSh2ia8tnTkNUkwxGmnumgckLh5aAbLa1xRmIn9+owi8qBNGKL+B881kNKNTy7FFqTEkpNkUvmw0n6PkA==}
+  /eslint/7.32.0:
+    resolution: {integrity: sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==}
     engines: {node: ^10.12.0 || >=12.0.0}
     hasBin: true
     dependencies:
