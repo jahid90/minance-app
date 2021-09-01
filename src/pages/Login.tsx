@@ -26,15 +26,15 @@ const Login = (props: ILoginProps) => {
             e.preventDefault();
             setError({} as ErrorResponse);
 
-            await dispatch({ type: Action.LOG_USER_IN, data: { username, password } });
+            dispatch({ type: Action.LOG_USER_IN, data: { username, password } });
 
             setUsername('');
             setPassword('');
 
             history.push(props?.location?.state?.from || '/');
-        } catch (e) {
-            console.error(e);
-            setError(e.response?.data?.error);
+        } catch (err) {
+            console.error(err);
+            setError(err.response?.data?.error);
         }
     };
 
