@@ -9,7 +9,7 @@ specifiers:
   '@types/react': 17.0.20
   '@types/react-dom': 17.0.9
   '@types/react-router-dom': 5.1.8
-  axios: 0.21.1
+  axios: 0.21.3
   eslint: 7.32.0
   jwt-decode: 3.1.2
   moment: 2.29.1
@@ -23,7 +23,7 @@ specifiers:
   typescript: 4.3.5
 
 dependencies:
-  axios: 0.21.1
+  axios: 0.21.3
   jwt-decode: 3.1.2
   moment: 2.29.1
   react: 17.0.2
@@ -3094,8 +3094,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axios/0.21.1:
-    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+  /axios/0.21.3:
+    resolution: {integrity: sha512-JtoZ3Ndke/+Iwt5n+BgSli/3idTvpt5OjKyoCmz4LX5+lPiY5l7C1colYezhlxThjNa/NhngCUWZSZFypIFuaA==}
     dependencies:
       follow-redirects: 1.14.1
     transitivePeerDependencies:
