@@ -8,7 +8,7 @@ specifiers:
   '@types/node': 14.17.18
   '@types/react': 17.0.24
   '@types/react-dom': 17.0.9
-  '@types/react-router-dom': 5.1.9
+  '@types/react-router-dom': 5.3.0
   axios: 0.21.3
   eslint: 7.32.0
   jwt-decode: 3.1.2
@@ -40,7 +40,7 @@ devDependencies:
   '@types/node': 14.17.18
   '@types/react': 17.0.24
   '@types/react-dom': 17.0.9
-  '@types/react-router-dom': 5.1.9
+  '@types/react-router-dom': 5.3.0
   eslint: 7.32.0
   prettier: 2.4.1
   react-scripts: 4.0.3_react@17.0.2+typescript@4.3.5
@@ -2319,11 +2319,11 @@ packages:
       '@types/react': 17.0.14
     dev: true
 
-  /@types/react-router-dom/5.1.9:
-    resolution: {integrity: sha512-Go0vxZSigXTyXx8xPkGiBrrc3YbBs82KE14WENMLS6TSUKcRFSmYVbL19zFOnNFqJhqrPqEs2h5eUpJhSRrwZw==}
+  /@types/react-router-dom/5.3.0:
+    resolution: {integrity: sha512-svUzpEpKDwK8nmfV2vpZNSsiijFNKY8+gUqGqvGGOVrXvX58k1JIJubZa5igkwacbq/0umphO5SsQn/BQsnKpw==}
     dependencies:
       '@types/history': 4.7.8
-      '@types/react': 17.0.20
+      '@types/react': 17.0.24
       '@types/react-router': 5.1.15
     dev: true
 
@@ -2331,19 +2331,11 @@ packages:
     resolution: {integrity: sha512-z3UlMG/x91SFEVmmvykk9FLTliDvfdIUky4k2rCfXWQ0NKbrP8o9BTCaCTPuYsB8gDkUnUmkcA2vYlm2DR+HAA==}
     dependencies:
       '@types/history': 4.7.8
-      '@types/react': 17.0.20
+      '@types/react': 17.0.24
     dev: true
 
   /@types/react/17.0.14:
     resolution: {integrity: sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==}
-    dependencies:
-      '@types/prop-types': 15.7.3
-      '@types/scheduler': 0.16.1
-      csstype: 3.0.8
-    dev: true
-
-  /@types/react/17.0.20:
-    resolution: {integrity: sha512-wWZrPlihslrPpcKyCSlmIlruakxr57/buQN1RjlIeaaTWDLtJkTtRW429MoQJergvVKc4IWBpRhWw7YNh/7GVA==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
