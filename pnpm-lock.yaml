@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.1.2
-  '@testing-library/user-event': 13.3.0
+  '@testing-library/user-event': 13.4.1
   '@types/jest': 27.0.2
   '@types/node': 14.17.27
   '@types/react': 17.0.30
@@ -35,7 +35,7 @@ dependencies:
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
-  '@testing-library/user-event': 13.3.0
+  '@testing-library/user-event': 13.4.1
   '@types/jest': 27.0.2
   '@types/node': 14.17.27
   '@types/react': 17.0.30
@@ -2156,8 +2156,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
-  /@testing-library/user-event/13.3.0:
-    resolution: {integrity: sha512-f8AJ8ybUna88Lmx3l5fuPMhzyyrcopQk/vgVDHVKOnOf2kkjfVSb0Px77iduHmh6uFUcXsD/z6qp4G13rObVrw==}
+  /@testing-library/user-event/13.4.1:
+    resolution: {integrity: sha512-WcnVwi96MmFsHLMNvBz03aPMVDU3UOgucXcn85fNXKKdtd7CHi2NAgE3hASt157yTB9krym0ikFVKbqYghKRCg==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
