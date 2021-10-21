@@ -6,7 +6,7 @@ specifiers:
   '@testing-library/user-event': 13.5.0
   '@types/jest': 27.0.2
   '@types/node': 14.17.27
-  '@types/react': 17.0.30
+  '@types/react': 17.0.31
   '@types/react-dom': 17.0.10
   '@types/react-router-dom': 5.3.1
   axios: 0.21.3
@@ -38,7 +38,7 @@ devDependencies:
   '@testing-library/user-event': 13.5.0
   '@types/jest': 27.0.2
   '@types/node': 14.17.27
-  '@types/react': 17.0.30
+  '@types/react': 17.0.31
   '@types/react-dom': 17.0.10
   '@types/react-router-dom': 5.3.1
   eslint: 7.32.0
@@ -2316,14 +2316,14 @@ packages:
   /@types/react-dom/17.0.10:
     resolution: {integrity: sha512-8oz3NAUId2z/zQdFI09IMhQPNgIbiP8Lslhv39DIDamr846/0spjZK0vnrMak0iB8EKb9QFTTIdg2Wj2zH5a3g==}
     dependencies:
-      '@types/react': 17.0.30
+      '@types/react': 17.0.31
     dev: true
 
   /@types/react-router-dom/5.3.1:
     resolution: {integrity: sha512-UvyRy73318QI83haXlaMwmklHHzV9hjl3u71MmM6wYNu0hOVk9NLTa0vGukf8zXUqnwz4O06ig876YSPpeK28A==}
     dependencies:
       '@types/history': 4.7.8
-      '@types/react': 17.0.27
+      '@types/react': 17.0.31
       '@types/react-router': 5.1.15
     dev: true
 
@@ -2331,19 +2331,11 @@ packages:
     resolution: {integrity: sha512-z3UlMG/x91SFEVmmvykk9FLTliDvfdIUky4k2rCfXWQ0NKbrP8o9BTCaCTPuYsB8gDkUnUmkcA2vYlm2DR+HAA==}
     dependencies:
       '@types/history': 4.7.8
-      '@types/react': 17.0.30
+      '@types/react': 17.0.31
     dev: true
 
-  /@types/react/17.0.27:
-    resolution: {integrity: sha512-zgiJwtsggVGtr53MndV7jfiUESTqrbxOcBvwfe6KS/9bzaVPCTDieTWnFNecVNx6EAaapg5xsLLWFfHHR437AA==}
-    dependencies:
-      '@types/prop-types': 15.7.3
-      '@types/scheduler': 0.16.1
-      csstype: 3.0.8
-    dev: true
-
-  /@types/react/17.0.30:
-    resolution: {integrity: sha512-3Dt/A8gd3TCXi2aRe84y7cK1K8G+N9CZRDG8kDGguOKa0kf/ZkSwTmVIDPsm/KbQOVMaDJXwhBtuOXxqwdpWVg==}
+  /@types/react/17.0.31:
+    resolution: {integrity: sha512-MQSR5EL4JZtdWRvqDgz9kXhSDDoy2zMTYyg7UhP+FZ5ttUOocWyxiqFJiI57sUG0BtaEX7WDXYQlkCYkb3X9vQ==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
