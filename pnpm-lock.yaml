@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@testing-library/jest-dom': 5.15.0
+  '@testing-library/jest-dom': 5.15.1
   '@testing-library/react': 12.1.2
   '@testing-library/user-event': 13.5.0
   '@types/jest': 27.0.3
@@ -33,7 +33,7 @@ dependencies:
   semantic-ui-react: 2.0.4_react-dom@17.0.2+react@17.0.2
 
 devDependencies:
-  '@testing-library/jest-dom': 5.15.0
+  '@testing-library/jest-dom': 5.15.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
   '@types/jest': 27.0.3
@@ -2128,8 +2128,8 @@ packages:
       pretty-format: 27.0.6
     dev: true
 
-  /@testing-library/jest-dom/5.15.0:
-    resolution: {integrity: sha512-lOMuQidnL1tWHLEWIhL6UvSZC1Qt3OkNe1khvi2h6xFiqpe5O8arYs46OU0qyUGq0cSTbroQyMktYNXu3a7sAA==}
+  /@testing-library/jest-dom/5.15.1:
+    resolution: {integrity: sha512-kmj8opVDRE1E4GXyLlESsQthCXK7An28dFWxhiMwD7ZUI7ZxA6sjdJRxLerD9Jd8cHX4BDc1jzXaaZKqzlUkvg==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
       '@babel/runtime': 7.14.6
