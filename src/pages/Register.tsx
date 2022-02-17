@@ -28,7 +28,7 @@ const Register = () => {
             setConfirmPassword('');
 
             history.push('/login');
-        } catch (e) {
+        } catch (e : any) {
             console.error(e);
             setError(e.response?.data?.error);
         }

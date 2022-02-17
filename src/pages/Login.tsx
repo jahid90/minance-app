@@ -32,7 +32,7 @@ const Login = (props: ILoginProps) => {
             setPassword('');
 
             history.push(props?.location?.state?.from || '/');
-        } catch (err) {
+        } catch (err : any) {
             console.error(err);
             setError(err.response?.data?.error);
         }
