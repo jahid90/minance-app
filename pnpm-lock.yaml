@@ -9,7 +9,7 @@ specifiers:
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.13
   '@types/react-router-dom': 5.3.3
-  axios: 0.26.0
+  axios: 0.26.1
   jwt-decode: 3.1.2
   moment: 2.29.1
   prettier: 2.5.1
@@ -22,7 +22,7 @@ specifiers:
   typescript: 4.6.2
 
 dependencies:
-  axios: 0.26.0
+  axios: 0.26.1
   jwt-decode: 3.1.2
   moment: 2.29.1
   react: 17.0.2
@@ -3037,8 +3037,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axios/0.26.0:
-    resolution: {integrity: sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==}
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
       follow-redirects: 1.14.8
     transitivePeerDependencies:
