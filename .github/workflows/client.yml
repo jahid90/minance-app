@@ -1,0 +1,38 @@
+name: client
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/client*.yml
+      - client/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/client*.yml
+      - client/**
+
+defaults:
+  run:
+    working-directory: ./client
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i -g pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build --if-present
+      - run: pnpm test
