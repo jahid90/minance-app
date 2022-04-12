@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 12.1.5
+  '@testing-library/react': 13.0.1
   '@testing-library/user-event': 13.5.0
   '@types/jest': 27.4.1
   '@types/node': 16.11.26
@@ -33,7 +33,7 @@ dependencies:
 
 devDependencies:
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 12.1.5_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react': 13.0.1_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
   '@types/jest': 27.4.1
   '@types/node': 16.11.26
@@ -2080,16 +2080,16 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/dom/8.0.0:
-    resolution: {integrity: sha512-Ym375MTOpfszlagRnTMO+FOfTt6gRrWiDOWmEnWLu9OvwCPOWtK6i5pBHmZ07wUJiQ7wWz0t8+ZBK2wFo2tlew==}
+  /@testing-library/dom/8.13.0:
+    resolution: {integrity: sha512-9VHgfIatKNXQNaZTtLnalIy0jNZzY35a4S3oi08YAt9Hv1VsfZ/DfA45lM8D/UhtHBGJ4/lGwp0PZkVndRkoOQ==}
     engines: {node: '>=12'}
     dependencies:
       '@babel/code-frame': 7.14.5
       '@babel/runtime': 7.14.6
       '@types/aria-query': 4.2.1
-      aria-query: 4.2.2
+      aria-query: 5.0.0
       chalk: 4.1.1
-      dom-accessibility-api: 0.5.6
+      dom-accessibility-api: 0.5.13
       lz-string: 1.4.4
       pretty-format: 27.5.1
     dev: true
@@ -2109,16 +2109,16 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/12.1.5_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-OfTXCJUFgjd/digLUuPxa0+/3ZxsQmE7ub9kcbW/wi96Bh3o/p5vrETcBGfP17NWPGqeYYl5LTRpwyGoMC4ysg==}
+  /@testing-library/react/13.0.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-zeHx3PohYYp+4bTJwrixQY8zSBZjWUGwYc7OhD1EpWTHS92RleApLoP72NdwaWxOrM1P1Uezt3XvGf6t2XSWPQ==}
     engines: {node: '>=12'}
     peerDependencies:
-      react: <18.0.0
-      react-dom: <18.0.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.14.6
-      '@testing-library/dom': 8.0.0
-      '@types/react-dom': 17.0.15
+      '@testing-library/dom': 8.13.0
+      '@types/react-dom': 18.0.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: true
@@ -2267,6 +2267,12 @@ packages:
 
   /@types/react-dom/17.0.15:
     resolution: {integrity: sha512-Tr9VU9DvNoHDWlmecmcsE5ZZiUkYx+nKBzum4Oxe1K0yJVyBlfbq7H3eXjxXqJczBKqPGq3EgfTru4MgKb9+Yw==}
+    dependencies:
+      '@types/react': 17.0.44
+    dev: true
+
+  /@types/react-dom/18.0.0:
+    resolution: {integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==}
     dependencies:
       '@types/react': 17.0.44
     dev: true
@@ -4617,6 +4623,10 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /dom-accessibility-api/0.5.13:
+    resolution: {integrity: sha512-R305kwb5CcMDIpSHUnLyIAp7SrSPBx6F0VfQFB3M75xVMHhXJJIdePYgbPPh1o57vCHNu5QztokWUPsLjWzFqw==}
     dev: true
 
   /dom-accessibility-api/0.5.6:
