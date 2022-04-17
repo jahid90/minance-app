@@ -11,7 +11,7 @@ specifiers:
   '@types/react-router-dom': 5.3.3
   axios: 0.26.1
   jwt-decode: 3.1.2
-  moment: 2.29.2
+  moment: 2.29.3
   prettier: 2.6.2
   react: 17.0.2
   react-dom: 17.0.2
@@ -24,7 +24,7 @@ specifiers:
 dependencies:
   axios: 0.26.1
   jwt-decode: 3.1.2
-  moment: 2.29.2
+  moment: 2.29.3
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 5.3.1_react@17.0.2
@@ -7906,8 +7906,8 @@ packages:
     hasBin: true
     dev: true
 
-  /moment/2.29.2:
-    resolution: {integrity: sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==}
+  /moment/2.29.3:
+    resolution: {integrity: sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==}
     dev: false
 
   /move-concurrently/1.0.1:
