@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Form, Icon, Label, Message, Segment } from 'semantic-ui-react';
 
 import { useDispatchContext } from '../context/AppContextProvider';
@@ -10,8 +10,8 @@ interface ILoginProps {
     location?: {
         state?: {
             from?: string;
-        }
-    }
+        };
+    };
 }
 
 const Login = (props: ILoginProps) => {
@@ -19,7 +19,7 @@ const Login = (props: ILoginProps) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatchContext();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: FormEvent<HTMLElement>) => {
         try {
@@ -31,8 +31,8 @@ const Login = (props: ILoginProps) => {
             setUsername('');
             setPassword('');
 
-            history.push(props?.location?.state?.from || '/');
-        } catch (err : any) {
+            navigate(props?.location?.state?.from || '/');
+        } catch (err: any) {
             console.error(err);
             setError(err.response?.data?.error);
         }
@@ -42,7 +42,7 @@ const Login = (props: ILoginProps) => {
         <Segment secondary className='form-container page-container w600'>
             <Form className='login-form form centered columnar' onSubmit={handleSubmit}>
                 <h1>Login</h1>
-                <Icon name='user' className='profile-image' size='massive'/>
+                <Icon name='user' className='profile-image' size='massive' />
                 <Form.Field className='form-field-container'>
                     <Form.Input
                         placeholder='Username'
@@ -67,7 +67,7 @@ const Login = (props: ILoginProps) => {
                 <Message>
                     <div>
                         Not registered?{' '}
-                        <Label basic color='blue' as='a' onClick={() => history.push('/register')}>
+                        <Label basic color='blue' as='a' onClick={() => navigate('/register')}>
                             Register
                         </Label>
                     </div>

@@ -3,7 +3,7 @@ import { Container, Dimmer, Loader } from 'semantic-ui-react';
 
 import { Action } from '../context/app-reducer';
 import { useDispatchContext } from '../context/AppContextProvider';
-import Routes from './Routes';
+import AppRoutes from './AppRoutes';
 
 function AppContainer() {
     const [loading, setLoading] = useState(true);
@@ -27,7 +27,7 @@ function AppContainer() {
                     <Loader />
                 </Dimmer>
             ) : (
-                <Routes />
+                <AppRoutes />
             )}
         </Container>
     );
