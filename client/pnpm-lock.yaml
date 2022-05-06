@@ -6,7 +6,7 @@ specifiers:
   '@testing-library/user-event': 14.1.1
   '@types/jest': 27.4.1
   '@types/node': 16.11.32
-  '@types/react': 17.0.44
+  '@types/react': 17.0.45
   '@types/react-dom': 18.0.3
   '@types/react-router-dom': 5.3.3
   axios: 0.27.2
@@ -37,7 +37,7 @@ devDependencies:
   '@testing-library/user-event': 14.1.1
   '@types/jest': 27.4.1
   '@types/node': 16.11.32
-  '@types/react': 17.0.44
+  '@types/react': 17.0.45
   '@types/react-dom': 18.0.3
   '@types/react-router-dom': 5.3.3
   prettier: 2.6.2
@@ -2266,14 +2266,14 @@ packages:
   /@types/react-dom/18.0.3:
     resolution: {integrity: sha512-1RRW9kst+67gveJRYPxGmVy8eVJ05O43hg77G2j5m76/RFJtMbcfAs2viQ2UNsvvDg8F7OfQZx8qQcl6ymygaQ==}
     dependencies:
-      '@types/react': 17.0.44
+      '@types/react': 17.0.45
     dev: true
 
   /@types/react-router-dom/5.3.3:
     resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 17.0.44
+      '@types/react': 17.0.45
       '@types/react-router': 5.1.15
     dev: true
 
@@ -2281,11 +2281,11 @@ packages:
     resolution: {integrity: sha512-z3UlMG/x91SFEVmmvykk9FLTliDvfdIUky4k2rCfXWQ0NKbrP8o9BTCaCTPuYsB8gDkUnUmkcA2vYlm2DR+HAA==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 17.0.44
+      '@types/react': 17.0.45
     dev: true
 
-  /@types/react/17.0.44:
-    resolution: {integrity: sha512-Ye0nlw09GeMp2Suh8qoOv0odfgCoowfM/9MG6WeRD60Gq9wS90bdkdRtYbRkNhXOpG4H+YXGvj4wOWhAC0LJ1g==}
+  /@types/react/17.0.45:
+    resolution: {integrity: sha512-YfhQ22Lah2e3CHPsb93tRwIGNiSwkuz1/blk4e6QrWS0jQzCSNbGLtOEYhPg02W0yGTTmpajp7dCTbBAMN3qsg==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
