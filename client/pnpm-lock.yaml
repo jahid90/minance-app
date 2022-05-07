@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1
+  '@testing-library/react': 13.2.0
   '@testing-library/user-event': 14.1.1
   '@types/jest': 27.4.1
   '@types/node': 16.11.33
@@ -33,7 +33,7 @@ dependencies:
 
 devDependencies:
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.1.1_react-dom@18.1.0+react@18.1.0
+  '@testing-library/react': 13.2.0_react-dom@18.1.0+react@18.1.0
   '@testing-library/user-event': 14.1.1
   '@types/jest': 27.4.1
   '@types/node': 16.11.33
@@ -2109,8 +2109,8 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/13.1.1_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-8mirlAa0OKaUvnqnZF6MdAh2tReYA2KtWVw1PKvaF5EcCZqgK5pl8iF+3uW90JdG5Ua2c2c2E2wtLdaug3dsVg==}
+  /@testing-library/react/13.2.0_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-Bprbz/SZVONCJy5f7hcihNCv313IJXdYiv0nSJklIs1SQCIHHNlnGNkosSXnGZTmesyGIcBGNppYhXcc11pb7g==}
     engines: {node: '>=12'}
     peerDependencies:
       react: ^18.0.0
@@ -2801,11 +2801,6 @@ packages:
   /ansi-regex/4.1.0:
     resolution: {integrity: sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==}
     engines: {node: '>=6'}
-    dev: true
-
-  /ansi-regex/5.0.0:
-    resolution: {integrity: sha512-bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak2f40Pm8JTFyM2mqxkG6ngkHO11f/lg==}
-    engines: {node: '>=8'}
     dev: true
 
   /ansi-regex/5.0.1:
@@ -9350,7 +9345,7 @@ packages:
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dependencies:
       '@jest/types': 27.0.6
-      ansi-regex: 5.0.0
+      ansi-regex: 5.0.1
       ansi-styles: 5.2.0
       react-is: 17.0.2
     dev: true
