@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Segment } from 'semantic-ui-react';
 
 import { Action } from '../context/app-reducer';
@@ -9,12 +9,12 @@ const Profile = () => {
     const { token } = useAppContext();
     const decoded = decode(token);
     const dispatch = useDispatchContext();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleClick = async () => {
         await dispatch({ type: Action.LOG_USER_OUT, data: { token } });
 
-        history.push('/');
+        navigate('/');
     };
 
     return (

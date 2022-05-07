@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Card, Icon } from 'semantic-ui-react';
 
 import { IDeposit } from '../models/Deposit';
@@ -9,7 +9,7 @@ interface Props {
 }
 
 const DepositCard = ({ item }: Props) => {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     return (
         <Card className='information-card'>
@@ -21,7 +21,7 @@ const DepositCard = ({ item }: Props) => {
             </Card.Content>
             <Card.Content extra>
                 <div className='ui two buttons'>
-                    <Button basic color='blue' onClick={() => history.push(`/deposit/${item.id}`)}>
+                    <Button basic color='blue' onClick={() => navigate(`/deposit/${item.id}`)}>
                         See Details
                     </Button>
                 </div>

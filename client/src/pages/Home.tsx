@@ -1,11 +1,11 @@
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { Segment } from 'semantic-ui-react';
 import { useAppContext } from '../context/AppContextProvider';
 
 const Home = () => {
     const { token } = useAppContext();
     if (token) {
-        return <Redirect to='/information' />
+        return <Navigate to='/information' />;
     }
 
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Card, Icon } from 'semantic-ui-react';
 
 import Money from './Money';
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const InformationCard = ({ item, type }: Props) => {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     return (
         <Card className='information-card'>
@@ -28,10 +28,10 @@ const InformationCard = ({ item, type }: Props) => {
             </Card.Content>
             <Card.Content extra>
                 <div className='ui two buttons'>
-                    <Button basic color='green' onClick={() => history.push(`/information/${item.id}`)}>
+                    <Button basic color='green' onClick={() => navigate(`/information/${item.id}`)}>
                         Details
                     </Button>
-                    <Button basic color='blue' onClick={() => history.push(`/investment/${item.id}`)}>
+                    <Button basic color='blue' onClick={() => navigate(`/investment/${item.id}`)}>
                         Investment
                     </Button>
                 </div>
