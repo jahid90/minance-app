@@ -14,7 +14,7 @@ specifiers:
   axios: 0.27.2
   jwt-decode: 3.1.2
   moment: 2.29.3
-  prettier: 2.7.0
+  prettier: 2.7.1
   react: 18.2.0
   react-dom: 18.2.0
   react-router-dom: 6.3.0
@@ -44,7 +44,7 @@ devDependencies:
   '@types/react-dom': 18.0.5
   '@types/react-router-dom': 5.3.3
   '@typescript-eslint/typescript-estree': 5.28.0_typescript@4.7.3
-  prettier: 2.7.0
+  prettier: 2.7.1
   react-scripts: 4.0.3_2q5yqitqkkawo4ktk7nrbtxhym
   typescript: 4.7.3
 
@@ -9748,8 +9748,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /prettier/2.7.0:
-    resolution: {integrity: sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==}
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
