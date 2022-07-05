@@ -8,7 +8,7 @@ specifiers:
   '@types/jest': 28.1.4
   '@types/node': 16.11.43
   '@types/react': 17.0.47
-  '@types/react-dom': 18.0.5
+  '@types/react-dom': 18.0.6
   '@types/react-router-dom': 5.3.3
   '@typescript-eslint/typescript-estree': 5.30.5
   axios: 0.27.2
@@ -41,7 +41,7 @@ devDependencies:
   '@types/jest': 28.1.4
   '@types/node': 16.11.43
   '@types/react': 17.0.47
-  '@types/react-dom': 18.0.5
+  '@types/react-dom': 18.0.6
   '@types/react-router-dom': 5.3.3
   '@typescript-eslint/typescript-estree': 5.30.5_typescript@4.7.4
   prettier: 2.7.1
@@ -2305,7 +2305,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.14.6
       '@testing-library/dom': 8.14.0
-      '@types/react-dom': 18.0.5
+      '@types/react-dom': 18.0.6
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
@@ -2452,8 +2452,8 @@ packages:
     resolution: {integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==}
     dev: true
 
-  /@types/react-dom/18.0.5:
-    resolution: {integrity: sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==}
+  /@types/react-dom/18.0.6:
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
       '@types/react': 17.0.47
     dev: true
