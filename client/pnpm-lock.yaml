@@ -5,7 +5,7 @@ specifiers:
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0
   '@testing-library/user-event': 14.2.1
-  '@types/jest': 28.1.4
+  '@types/jest': 28.1.5
   '@types/node': 16.11.43
   '@types/react': 17.0.47
   '@types/react-dom': 18.0.6
@@ -38,7 +38,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 14.2.1_gwcpuyfvwbszhlmedmugzivgzu
-  '@types/jest': 28.1.4
+  '@types/jest': 28.1.5
   '@types/node': 16.11.43
   '@types/react': 17.0.47
   '@types/react-dom': 18.0.6
@@ -2409,8 +2409,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/28.1.4:
-    resolution: {integrity: sha512-telv6G5N7zRJiLcI3Rs3o+ipZ28EnE+7EvF0pSrt2pZOMnAVI/f+6/LucDxOvcBcTeTL3JMF744BbVQAVBUQRA==}
+  /@types/jest/28.1.5:
+    resolution: {integrity: sha512-TLAC2zXxGnohSP3GxgIyJn7yrTeRPDEyVFyCY1NE2wzg392auI+69uk5EPGjUXuhkq/K208J/TWpLG7J8ebIEQ==}
     dependencies:
       jest-matcher-utils: 28.1.1
       pretty-format: 28.1.1
@@ -2506,7 +2506,7 @@ packages:
   /@types/testing-library__jest-dom/5.14.0:
     resolution: {integrity: sha512-l2P2GO+hFF4Liye+fAajT1qBqvZOiL79YMpEvgGs1xTK7hECxBI8Wz4J7ntACJNiJ9r0vXQqYovroXRLPDja6A==}
     dependencies:
-      '@types/jest': 28.1.4
+      '@types/jest': 28.1.5
     dev: true
 
   /@types/uglify-js/3.13.0:
