@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@testing-library/dom': 8.16.1
+  '@testing-library/dom': 8.17.1
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.3.0
   '@testing-library/user-event': 14.4.3
@@ -34,10 +34,10 @@ dependencies:
   semantic-ui-react: 2.1.3_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
-  '@testing-library/dom': 8.16.1
+  '@testing-library/dom': 8.17.1
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
-  '@testing-library/user-event': 14.4.3_znfriv3ismgf3ybh2woqwlpfea
+  '@testing-library/user-event': 14.4.3_wl4iynrlixafokvgqnhzlvigei
   '@types/jest': 28.1.6
   '@types/node': 16.11.47
   '@types/react': 17.0.48
@@ -2271,8 +2271,8 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/dom/8.16.1:
-    resolution: {integrity: sha512-XEV2mBxgv6DKjL3+U3WEUzBgT2CjYksoXGlLrrJXYP8OvRfGkBonvelkorazpFlp8tkEecO06r43vN4DIEyegQ==}
+  /@testing-library/dom/8.17.1:
+    resolution: {integrity: sha512-KnH2MnJUzmFNPW6RIKfd+zf2Wue8mEKX0M3cpX6aKl5ZXrJM1/c/Pc8c2xDNYQCnJO48Sm5ITbMXgqTr3h4jxQ==}
     engines: {node: '>=12'}
     dependencies:
       '@babel/code-frame': 7.16.7
@@ -2308,19 +2308,19 @@ packages:
       react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.14.6
-      '@testing-library/dom': 8.16.1
+      '@testing-library/dom': 8.17.1
       '@types/react-dom': 18.0.6
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@testing-library/user-event/14.4.3_znfriv3ismgf3ybh2woqwlpfea:
+  /@testing-library/user-event/14.4.3_wl4iynrlixafokvgqnhzlvigei:
     resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
-      '@testing-library/dom': 8.16.1
+      '@testing-library/dom': 8.17.1
     dev: true
 
   /@tootallnate/once/1.1.2:
