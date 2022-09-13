@@ -5,7 +5,7 @@ specifiers:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0
   '@testing-library/user-event': 14.4.3
-  '@types/jest': 29.0.1
+  '@types/jest': 29.0.2
   '@types/node': 16.11.58
   '@types/react': 17.0.49
   '@types/react-dom': 18.0.6
@@ -38,7 +38,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 14.4.3_wl4iynrlixafokvgqnhzlvigei
-  '@types/jest': 29.0.1
+  '@types/jest': 29.0.2
   '@types/node': 16.11.58
   '@types/react': 17.0.49
   '@types/react-dom': 18.0.6
@@ -2432,8 +2432,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/29.0.1:
-    resolution: {integrity: sha512-CAZrjLRZs4xEdIrfrdV74xK1Vo/BKQZwUcjJv3gp6gMeV3BsVxMnXTcgtYOKyphT4DPPo7jxVEVhuwJTQn3oPQ==}
+  /@types/jest/29.0.2:
+    resolution: {integrity: sha512-TaklkwSEtvwJpleiKBHgEBySIQlcZ08gYP/s5wdtdLnjz9uxjnDd7U+Y0JWACebkqBc+jtbol2PEtEW0wQV2zQ==}
     dependencies:
       expect: 29.0.1
       pretty-format: 29.0.1
@@ -2529,7 +2529,7 @@ packages:
   /@types/testing-library__jest-dom/5.14.0:
     resolution: {integrity: sha512-l2P2GO+hFF4Liye+fAajT1qBqvZOiL79YMpEvgGs1xTK7hECxBI8Wz4J7ntACJNiJ9r0vXQqYovroXRLPDja6A==}
     dependencies:
-      '@types/jest': 29.0.1
+      '@types/jest': 29.0.2
     dev: true
 
   /@types/uglify-js/3.13.0:
