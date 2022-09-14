@@ -7,7 +7,7 @@ specifiers:
   '@testing-library/user-event': 14.4.3
   '@types/jest': 29.0.2
   '@types/node': 16.11.59
-  '@types/react': 17.0.49
+  '@types/react': 17.0.50
   '@types/react-dom': 18.0.6
   '@types/react-router-dom': 5.3.3
   '@typescript-eslint/typescript-estree': 5.37.0
@@ -40,7 +40,7 @@ devDependencies:
   '@testing-library/user-event': 14.4.3_wl4iynrlixafokvgqnhzlvigei
   '@types/jest': 29.0.2
   '@types/node': 16.11.59
-  '@types/react': 17.0.49
+  '@types/react': 17.0.50
   '@types/react-dom': 18.0.6
   '@types/react-router-dom': 5.3.3
   '@typescript-eslint/typescript-estree': 5.37.0_typescript@4.8.3
@@ -2478,14 +2478,14 @@ packages:
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
-      '@types/react': 17.0.49
+      '@types/react': 17.0.50
     dev: true
 
   /@types/react-router-dom/5.3.3:
     resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 17.0.49
+      '@types/react': 17.0.50
       '@types/react-router': 5.1.15
     dev: true
 
@@ -2493,11 +2493,11 @@ packages:
     resolution: {integrity: sha512-z3UlMG/x91SFEVmmvykk9FLTliDvfdIUky4k2rCfXWQ0NKbrP8o9BTCaCTPuYsB8gDkUnUmkcA2vYlm2DR+HAA==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 17.0.49
+      '@types/react': 17.0.50
     dev: true
 
-  /@types/react/17.0.49:
-    resolution: {integrity: sha512-CCBPMZaPhcKkYUTqFs/hOWqKjPxhTEmnZWjlHHgIMop67DsXywf9B5Os9Hz8KSacjNOgIdnZVJamwl232uxoPg==}
+  /@types/react/17.0.50:
+    resolution: {integrity: sha512-ZCBHzpDb5skMnc1zFXAXnL3l1FAdi+xZvwxK+PkglMmBrwjpp9nKaWuEvrGnSifCJmBFGxZOOFuwC6KH/s0NuA==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
