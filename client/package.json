@@ -45,7 +45,7 @@
         "@types/jest": "29.2.2",
         "@types/node": "16.18.3",
         "@types/react": "17.0.52",
-        "@types/react-dom": "18.0.8",
+        "@types/react-dom": "18.0.9",
         "@types/react-router-dom": "5.3.3",
         "@typescript-eslint/typescript-estree": "5.42.1",
         "prettier": "2.7.1",
